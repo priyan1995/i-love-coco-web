@@ -65,13 +65,23 @@ get_header();
 
             <div class="item text-center">
                 <div class="pd-cert-card">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-3.png">
                     <h4>Japanese organic <br>
                         Certification</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
                     <a href="">Read More</a>
                 </div>
             </div>
+            <div class="item text-center">
+                <div class="pd-cert-card">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-2.png">
+                    <h4>Japanese organic <br>
+                        Certification</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
+                    <a href="">Read More</a>
+                </div>
+            </div>
+
             <div class="item text-center">
                 <div class="pd-cert-card">
                     <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">

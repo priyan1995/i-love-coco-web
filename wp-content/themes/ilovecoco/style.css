@@ -187,3 +187,39 @@ section.l-c-banner {
     color: rgba(255, 255, 255,1);
     text-decoration: none;
   }
+
+  #pd-cert-slider{
+      position: relative;
+  }
+
+  #pd-cert-slider  .owl-next{
+    background:  rgba(51, 53, 51,1);;
+    border-radius: 0;
+    padding: 0px 13px 8px !important;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 26px;
+}
+
+#pd-cert-slider  .owl-prev{
+    background:  rgba(51, 53, 51,1);;
+    border-radius: 0;
+    padding: 0px 13px 8px !important;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 26px;
+}
+
+#pd-cert-slider  .owl-next:focus, #pd-cert-slider  .owl-prev:focus{
+    border: none;
+    outline: none;
+}
+
+#pd-cert-slider .owl-nav {
+    right: 80px;
+    bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+}
