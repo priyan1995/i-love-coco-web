@@ -36,6 +36,18 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Roboto Slab', serif;
 }
 
+.p-r-2{
+    padding-right: 2px;
+}
+
+.p-l-2{
+    padding-left: 2px;
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+}
 
 /* banner */
 
@@ -250,7 +262,6 @@ section.l-c-banner {
 .l-c-contact-sec{
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -274,4 +285,70 @@ section.l-c-banner {
 
 .l-c-contact-sec textarea{
    width:100%;  
+   height:155px;
+   padding: 10px;
+   border: none;
 }
+
+
+.l-c-contact-sec #pd-home-cont-name,
+.l-c-contact-sec #pd-home-cont-email,
+.l-c-contact-sec #pd-cont-home-phone{
+    padding: 12px;
+    margin-bottom: 5px;  
+    border: none;
+}
+
+.l-c-contact-sec #pd-cont-submit-home{
+    background: #daab09;
+    border: none;
+    width: 100%;
+    padding: 11px 5px; 
+    font-size: 12px;
+    color: white;
+    height: 47px;
+}
+
+.l-c-contact-sec #pd-cont-home-radio-btns .wpcf7-list-item{
+    display: inline-block;
+    align-items: flex-start;
+    text-align: left;    
+    margin-left: 2px;
+    margin-right: 10px;
+    color: white;
+    font-weight: 100;
+
+}
+.l-c-contact-sec #pd-cont-home-radio-btns .wpcf7-list-item label{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.l-c-contact-sec #pd-cont-home-radio-btns input[type="checkbox"] {
+    margin-right: 3px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 0;
+    background-color: transparent;
+    width: 18px;
+    height: 18px;
+}
+
+/* footer */
+
+.l-c-footer{
+    background:#056240;
+}
+
+.pd-bottom-bar{
+    background: #333533;
+    text-align: center;
+}
+
+.pd-bottom-bar p{
+    margin: 0;
+    padding: 15px 0;
+    font-weight: 300;
+    font-size: 14px;
+}
+
