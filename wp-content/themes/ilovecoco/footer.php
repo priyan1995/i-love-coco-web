@@ -2,8 +2,13 @@
 <section class="l-c-footer l-c-p-t-b-3">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12"></div>
-            <div class="col-lg-4"></div>
+            <div class="col-lg-12 p-b-20 pd-footer-logo">
+                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/footer-logo.png" />
+            </div>
+            <div class="col-lg-4 pd-footer-desc">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+            </div>
             <div class="col-lg-2"></div>
             <div class="col-lg-3"></div>
             <div class="col-lg-3"></div>

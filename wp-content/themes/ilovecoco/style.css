@@ -49,6 +49,19 @@ textarea:focus{
     outline: none;
 }
 
+.p-b-20{
+    padding-bottom: 20px;
+}
+
+.pad-0{
+    padding: 0;
+}
+
+button{
+    outline: none !important;
+}
+
+
 /* banner */
 
 section.l-c-banner {
@@ -348,7 +361,130 @@ section.l-c-banner {
 .pd-bottom-bar p{
     margin: 0;
     padding: 15px 0;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 14px;
 }
 
+.l-c-footer .pd-footer-desc p {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.pd-footer-logo{
+    position: relative;
+}
+
+.pd-footer-logo::after{
+    content: '';
+    position: absolute;
+    right: 25px;
+    height: 2px;
+    background: #ffffffe3;
+    width: 82%;
+    bottom: 0;
+    z-index: 99;
+    top: 30px;
+    border-radius: 75px;
+}
+
+#pd-n-e-slider .pd-cert-card{
+    padding: 10px;
+}
+
+.pad-r-0{
+    padding-right: 0;
+}
+
+#pd-n-e-slider .pd-img-top img{
+    height: 250px;
+    object-fit: cover;
+}
+
+#pd-n-e-slider .pd-img-top{
+    position: relative;
+}
+
+#pd-n-e-slider .pd-img-top::after{
+    width: 100%;
+    position: absolute;
+    content: '';
+    height: 100%;
+    top: 0;
+    background: linear-gradient(to bottom, #00000085, transparent);
+}
+
+#pd-n-e-slider .pd-content-card h4{
+    font-size: 18px;
+    color: rgba(51, 53, 51,1);
+    line-height: 1;
+    margin-bottom: 14px;
+}
+  
+#pd-n-e-slider .pd-content-card p{
+    font-size: 14px;
+    color: rgba(51, 53, 51,1);
+    line-height: 1.714;
+    height: 100px;
+    overflow-y: auto;
+}
+
+#pd-n-e-slider .pd-content-card {
+    background: #f4f4f5;
+    padding: 25px 20px;
+    min-height: 200px;
+}
+
+#pd-n-e-slider .pd-content-card a{
+    font-size: 14px;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    background: rgba(51, 53, 51,1);
+    padding: 5px 10px 7px;
+    display: inline-block;
+}
+
+#pd-n-e-slider .pd-content-card a:hover{
+    text-decoration: none;
+}
+
+#pd-n-e-slider .pd-positioned-heading-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000000a3;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    line-height: normal;
+    font-size: 15px;
+    margin: 0;
+}
+
+#pd-n-e-slider .owl-prev {
+    background: rgba(51, 53, 51,1);
+    border-radius: 0;
+    padding: 0px 13px 8px !important;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 26px;
+}
+
+#pd-n-e-slider .owl-next {
+    background: rgba(51, 53, 51,1);
+    border-radius: 0;
+    padding: 0px 13px 8px !important;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 26px;
+}
+
+#pd-n-e-slider .owl-nav {
+    right: 80px;
+    bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+}

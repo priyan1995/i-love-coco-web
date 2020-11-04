@@ -51,7 +51,6 @@ jQuery(document).ready(function($) {
         margin:10,
         nav:true,
         dots:false,
-        animateOut: 'fadeOut',
         autoplay:false,
         autoplayTimeout:3000,
         autoplayHoverPause:true,
@@ -60,10 +59,10 @@ jQuery(document).ready(function($) {
                 items:1
             },
             600:{
-                items:2
+                items:1
             },
             1000:{
-                items:3
+                items:1
             }
         }
     });

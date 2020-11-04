@@ -106,30 +106,78 @@ get_header();
     </div>
 </section>
 
-<!-- <section class="l-c-news-events l-c-p-t-b-3">
+<section class="l-c-news-events l-c-p-t-b-3">
     <div class="container">
-        
+
         <h2 class="text-center">News and Events</h2>
         <p class="text-center para-main">Lorem ipsum dolor sit amet, consectetur</p>
 
         <div class="owl-carousel owl-theme" id="pd-n-e-slider">
-            <div class="item text-center">
 
-                <div class="pd-cert-card">
-                    <img src="<?php// echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                    <h4>Japanese organic <br>
-                        Certification</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="">Read More</a>
+            <?php
+
+
+            for ($x = 0; $x <= 5; $x++) {
+
+            ?>
+
+
+                <div class="item">
+
+                    <div class="row">
+
+                        <div class="col-lg-6 pad-r-0">
+                            <div class="pd-cert-card">
+                                <div class="pd-img-top">
+                                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/n-e-post-1.png">
+                                </div>
+                                <div class="pd-content-card">
+                                    <h4>Japanese organic Certification</h4>
+                                    <p style="height: 68px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
+                                    <a href="">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 pad-0">
+                            <div class="pd-cert-card">
+                                <div class="pd-img-top">
+                                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/n-e-post-1.png">
+                                    <h4 class="pd-positioned-heading-card">Japanese organic Certification</h4>
+                                </div>
+                                <div class="pd-content-card">
+
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
+                                    <a href="">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 pad-0">
+                            <div class="pd-cert-card">
+                                <div class="pd-img-top">
+                                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/n-e-post-1.png">
+                                    <h4 class="pd-positioned-heading-card">Japanese organic Certification</h4>
+                                </div>
+                                <div class="pd-content-card">
+
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
+                                    <a href="">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
-            </div>
 
+            <?php } ?>
 
 
         </div>
     </div>
-</section> -->
+</section>
 
 
 
