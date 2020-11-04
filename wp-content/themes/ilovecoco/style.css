@@ -223,3 +223,55 @@ section.l-c-banner {
     text-align: left;
     padding-left: 20px;
 }
+
+/* video section */
+
+.l-c-u-tube-video-sec iframe{    
+    width: 100%;
+    height: 95vh;
+}
+
+.l-c-news-events h2{
+    font-size: 45px;
+    color: rgb(51, 53, 51);
+    line-height: 50px;
+    text-align: center;
+}
+
+.l-c-news-events .para-main{
+    font-size: 20px;
+    color: rgb(51, 53, 51);
+    text-align: center;
+    font-weight: 300;
+}
+
+/* contact-home  */
+
+.l-c-contact-sec{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.l-c-contact-sec h2{
+    font-size: 45px;
+    color: rgba(255, 255, 255,1);
+    line-height: 50px;
+    text-align: center;
+}
+
+.l-c-contact-sec .main-para{
+    font-size: 20px;
+    color: rgba(255, 255, 255,1);
+    text-align: center;
+    font-weight: 300;
+}
+
+.l-c-contact-sec input{
+    width:100%;
+}
+
+.l-c-contact-sec textarea{
+   width:100%;  
+}
