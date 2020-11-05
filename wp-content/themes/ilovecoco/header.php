@@ -40,14 +40,14 @@
 
         <div class="container pd-menu-bar">
           <div class="row">
-            <div class="col-md-2 col-1 pd-logo-col">
+            <div class="col-md-3 col-1 pd-logo-col">
               <div class="logo-wrap">
                 <a rel="home" href="<?php echo esc_url(home_url('/')); ?>">
                   <?php the_custom_logo(); ?>
                 </a>
               </div>
             </div>
-            <div class="col-md-8 col-8 pd-mob-nav-bar">
+            <div class="col-md-9 col-8 pd-mob-nav-bar pd-nav-col">
 
               <nav class="navbar navbar-expand-lg navbar-dark " id="pd_fixed_nav">
 
@@ -58,18 +58,18 @@
 
                 <div class="main-menu-wrap collapse navbar-collapse" id="navbarSupportedContent">
                   <?php
-                //   wp_nav_menu(
-                //     array(
-                //       'depth'       => 10,
-                //       'theme_location'  => 'primary',
-                //       'container_class' => 'false',
-                //       'container_id'    => 'navbarNavDropdown',
-                //       'menu_class'      => 'navbar-nav',
-                //       'fallback_cb'     => '',
-                //       'menu_id'         => 'main-menu',
-                //       'walker'          => new WP_Bootstrap_Navwalker(),
-                //     )
-                //   );
+                  wp_nav_menu(
+                    array(
+                      'depth'       => 10,
+                      'theme_location'  => 'primary',
+                      'container_class' => 'false',
+                      'container_id'    => 'navbarNavDropdown',
+                      'menu_class'      => 'navbar-nav',
+                      'fallback_cb'     => '',
+                      'menu_id'         => 'main-menu',
+                      'walker'          => new WP_Bootstrap_Navwalker(),
+                    )
+                  );
                   ?>
                 </div>
 
@@ -77,14 +77,14 @@
 
             </div>
             
-            <div class="col-lg-2 pd-top-social">
+            <!-- <div class="col-lg-2 pd-top-social">
               <div class="pd-social-links">
-                <a href="<?php echo get_option('facebook_url'); ?>" target="_blank" class="link-fb"><i class="fab fa-facebook-f"></i></a>
-                <a href="<?php echo get_option('twitter_url'); ?>" target="_blank" class="link-linked"><i class="fab fa-linkedin"></i></a>
-                <a href="<?php echo get_option('insta_url'); ?>" target="_blank" class="link-inst"><i class="fab fa-instagram"></i></a>
+                <a href="<?php// echo get_option('facebook_url'); ?>" target="_blank" class="link-fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="<?php// echo get_option('twitter_url'); ?>" target="_blank" class="link-linked"><i class="fab fa-linkedin"></i></a>
+                <a href="<?php// echo get_option('insta_url'); ?>" target="_blank" class="link-inst"><i class="fab fa-instagram"></i></a>
 
               </div>
-            </div>
+            </div> -->
 
           </div>
         </div>
