@@ -37,7 +37,8 @@ add_action( 'after_setup_theme', 'register_nero_primary_menu' );
 function register_nero_primary_menu() {
 	register_nav_menus(array( 
 		'primary'	=> 	__( 'Primary Menu', 'I love coco Web' ),
-		'footer'	=>	__( 'Footer Menu', 'I love coco Web' )
+		'footer'	=>	__( 'Footer Menu', 'I love coco Web' ),
+		'product'	=>	__( 'Product Menu', 'I love coco Web' ),
 
 	 ));
 }

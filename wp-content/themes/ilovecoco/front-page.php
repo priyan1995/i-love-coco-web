@@ -12,7 +12,7 @@ get_header();
     </div>
 </section>
 
-<section class="l-c-abt-sec l-c-p-t-b-3">
+<section class="l-c-abt-sec l-c-p-t-b-3 pad-b-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -40,80 +40,270 @@ get_header();
     </div>
 </section>
 
-<section class="l-c-product-sec l-c-p-t-b-3">
+<section class="l-c-product-sec l-c-p-t-b-3" >
     <div class="container">
-        <h2>Buy in Bulks</h2>
+        <h2>Products</h2>
         <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
 
 
 
         <div class="pd-product-tab-home">
-            <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
 
-                    <?php
-
-                    $terms = get_terms(array(
-                        'taxonomy' => 'product_categories',
-                        'hide_empty' => true,
-                        'post_type' => 'products'
-                    ));
-
-                    foreach ($terms as $term) {
-                        $slug = $term->slug;
-                        $term_id = $term->id;
-                        $category = $term->name;
-                        $category_image = get_field('category_icon', $term);
-                        $category_slug = $term->slug;
-
-                    ?>
-
-                        <a class="nav-item nav-link <?php if ($category_slug == 'coconut_milk') {
-                                                        echo 'active';
-                                                    } ?>" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><?php echo  $category; ?></a>
-
-
-                        <!-- <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a> -->
-
-                    <?php } ?>
-
-
-                </div>
-            </nav>
             <div class="tab-content" id="nav-tabContent">
 
+                <!-- ==== coconutmilk tab -->
+                <div class="tab-pane fade show active" id="nav-coconut_milk" role="tabpanel" aria-labelledby="nav-coconut_milk-tab">
+                    <div class="row">
 
-                <?php
-                $products_coco_milk = new WP_Query("taxonomy=product_categories&term=coconut_milk");
-                if ($products_coco_milk->have_posts()) :
-                    while ($products_coco_milk->have_posts()) :
-                        $products_coco_milk->the_post();
+                        <?php
+                        $products_coco_milk  = new WP_Query(array("taxonomy" => "product_categories", "term" => "coconut_milk", "posts_per_page" => "8"));
+                        if ($products_coco_milk->have_posts()) :
+                            while ($products_coco_milk->have_posts()) :
+                                $products_coco_milk->the_post();
 
-                ?>
-                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                            <?php the_title(); ?>
-                            <img src="<?php the_field('image_prod'); ?>">
+                        ?>
+                                <div class="col-lg-3">
+                                    <div class="pd-prod-card-home text-center">
+                                        <img src="<?php the_field('image_prod'); ?>">
+                                        <h4><?php the_title(); ?></h4>
+                                        <p><?php the_field('short_description_prod'); ?></p>
+                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                    </div>
 
-                        </div>
+                                </div>
 
-                <?php
-                    endwhile;
-                endif;
-                ?>
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query();
+                        ?>
 
-                <!-- <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div> -->
+                    </div>
+                </div>
+
+                <!-- ==== coconutmilk chips -->
+                <div class="tab-pane fade" id="coconut_chips" role="tabpanel" aria-labelledby="coconut_chips-tab">
+                    <div class="row">
+
+                        <?php
+                        $products_coco_chips  = new WP_Query(array("taxonomy" => "product_categories", "term" => "coconut_chips", "posts_per_page" => "8"));
+                        if ($products_coco_chips->have_posts()) :
+                            while ($products_coco_chips->have_posts()) :
+                                $products_coco_chips->the_post();
+
+                        ?>
+                                <div class="col-lg-3">
+                                    <div class="pd-prod-card-home text-center">
+                                        <img src="<?php the_field('image_prod'); ?>">
+                                        <h4><?php the_title(); ?></h4>
+                                        <p><?php the_field('short_description_prod'); ?></p>
+                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                    </div>
+
+                                </div>
+
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query();
+                        ?>
+
+                    </div>
+                </div>
+
+                <!-- ==== coconut cream -->
+                <div class="tab-pane fade" id="coconut_cream" role="tabpanel" aria-labelledby="coconut_cream-tab">
+                    <div class="row">
+
+                        <?php
+                        $products_coco_cream  = new WP_Query(array("taxonomy" => "product_categories", "term" => "coconut_cream", "posts_per_page" => "8"));
+                        if ($products_coco_cream->have_posts()) :
+                            while ($products_coco_cream->have_posts()) :
+                                $products_coco_cream->the_post();
+
+                        ?>
+                                <div class="col-lg-3">
+                                    <div class="pd-prod-card-home text-center">
+                                        <img src="<?php the_field('image_prod'); ?>">
+                                        <h4><?php the_title(); ?></h4>
+                                        <p><?php the_field('short_description_prod'); ?></p>
+                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                    </div>
+
+                                </div>
+
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query();
+                        ?>
+
+                    </div>
+                </div>
+
+                <!-- ==== coconut milk -->
+                <div class="tab-pane fade" id="coconut_milk" role="tabpanel" aria-labelledby="coconut_milk-tab">
+                    <div class="row">
+
+                        <?php
+                        $products_coco_cream  = new WP_Query(array("taxonomy" => "product_categories", "term" => "coconut_milk", "posts_per_page" => "8"));
+                        if ($products_coco_cream->have_posts()) :
+                            while ($products_coco_cream->have_posts()) :
+                                $products_coco_cream->the_post();
+
+                        ?>
+                                <div class="col-lg-3">
+                                    <div class="pd-prod-card-home text-center">
+                                        <img src="<?php the_field('image_prod'); ?>">
+                                        <h4><?php the_title(); ?></h4>
+                                        <p><?php the_field('short_description_prod'); ?></p>
+                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                    </div>
+
+                                </div>
+
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query();
+                        ?>
+
+                    </div>
+                </div>
+
+                <!-- ==== coconut milk -->
+                <div class="tab-pane fade" id="coconut_oil" role="tabpanel" aria-labelledby="coconut_oil-tab">
+                    <div class="row">
+
+                        <?php
+                        $products_coco_cream  = new WP_Query(array("taxonomy" => "product_categories", "term" => "coconut_oil", "posts_per_page" => "8"));
+                        if ($products_coco_cream->have_posts()) :
+                            while ($products_coco_cream->have_posts()) :
+                                $products_coco_cream->the_post();
+
+                        ?>
+                                <div class="col-lg-3">
+                                    <div class="pd-prod-card-home text-center">
+                                        <img src="<?php the_field('image_prod'); ?>">
+                                        <h4><?php the_title(); ?></h4>
+                                        <p><?php the_field('short_description_prod'); ?></p>
+                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                    </div>
+
+                                </div>
+
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query();
+                        ?>
+
+                    </div>
+                </div>
+
+                <!-- ==== coconut milk -->
+                <div class="tab-pane fade" id="coconut_water" role="tabpanel" aria-labelledby="coconut_water-tab">
+                    <div class="row">
+
+                        <?php
+                        $products_coco_cream  = new WP_Query(array("taxonomy" => "product_categories", "term" => "coconut_water", "posts_per_page" => "8"));
+                        if ($products_coco_cream->have_posts()) :
+                            while ($products_coco_cream->have_posts()) :
+                                $products_coco_cream->the_post();
+
+                        ?>
+                                <div class="col-lg-3">
+                                    <div class="pd-prod-card-home text-center">
+                                        <img src="<?php the_field('image_prod'); ?>">
+                                        <h4><?php the_title(); ?></h4>
+                                        <p><?php the_field('short_description_prod'); ?></p>
+                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                    </div>
+
+                                </div>
+
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query();
+                        ?>
+
+                    </div>
+                </div>
+
+                <!-- ==== coconut butter -->
+                <div class="tab-pane fade" id="coconut_butter" role="tabpanel" aria-labelledby="coconut_butter-tab">
+                    <div class="row">
+
+                        <?php
+                        $products_coco_cream  = new WP_Query(array("taxonomy" => "product_categories", "term" => "coconut_butter", "posts_per_page" => "8"));
+                        if ($products_coco_cream->have_posts()) :
+                            while ($products_coco_cream->have_posts()) :
+                                $products_coco_cream->the_post();
+
+                        ?>
+                                <div class="col-lg-3">
+                                    <div class="pd-prod-card-home text-center">
+                                        <img src="<?php the_field('image_prod'); ?>">
+                                        <h4><?php the_title(); ?></h4>
+                                        <p><?php the_field('short_description_prod'); ?></p>
+                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                    </div>
+
+                                </div>
+
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query();
+                        ?>
+
+                    </div>
+                </div>
+
+
             </div>
+
+
+            <ul class="row nav nav-tabs" id="myTab" role="tablist">
+
+                <?php
+
+                $terms = get_terms(array(
+                    'taxonomy' => 'product_categories',
+                    'hide_empty' => true,
+                    'post_type' => 'products'
+                ));
+
+                foreach ($terms as $term) {
+                    $term_id = $term->id;
+                    $category = $term->name;
+                    $category_image = get_field('category_icon', $term);
+                    $category_slug = $term->slug;
+
+                ?>
+
+
+                    <li class="col-lg-2 nav-item">
+                        <a class="nav-link <?php if ($category_slug == 'coconut_milk') {
+                                                echo 'active show';
+                                            } ?>" id="<?php echo $category_slug; ?>-tab" data-toggle="tab" href="#<?php echo $category_slug; ?>" role="tab" aria-controls="<?php echo $category_slug; ?>" aria-selected="true">
+
+                            <div class="pd-cat-box">
+                                <img src="<?php echo $category_image; ?> ">
+                                <h4><?php echo  $category; ?></h4>
+                            </div>
+                        </a>
+                    </li>
+                <?php } ?>
+
+            </ul>
         </div>
-
-
-
 
     </div>
 </section>
 
-<section class="l-c-certificate-sec l-c-p-t-b-3">
+<section class="l-c-certificate-sec l-c-p-t-b-3 pad-t-5">
     <div class="container">
         <h2>Our Certifications</h2>
         <p>Lorem ipsum dolor sit amet, consectetur</p>
