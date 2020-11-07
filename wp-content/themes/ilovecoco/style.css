@@ -589,3 +589,19 @@ section.l-c-banner {
     padding: 17px 0 0;
     transition: 0.5s;
 }
+
+/* product section */
+
+.l-c-product-sec h2{
+    font-size: 45px;
+    color: rgba(51, 53, 51,1);
+    line-height: 50px;
+    text-align: center;
+}
+
+.l-c-product-sec .main-para{
+    font-size: 20px;
+    color: rgba(51, 53, 51,1);
+    text-align: center;
+    font-weight: 300;
+}
