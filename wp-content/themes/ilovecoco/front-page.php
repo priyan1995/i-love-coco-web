@@ -51,15 +51,32 @@ get_header();
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
 
-                <?php 
-                
-                
+                    <?php
 
-                ?>
+                    $terms = get_terms(array(
+                        'taxonomy' => 'product_categories',
+                        'hide_empty' => true,
+                        'post_type' => 'products'
+                    ));
 
-                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                    foreach ($terms as $term) {
+                        $slug = $term->slug;
+                        $term_id = $term->id;
+                        $category = $term->name;
+                        $category_image = get_field('category_icon', $term);
+                        $category_slug = $term->slug;
+
+                    ?>
+
+                        <a class="nav-item nav-link <?php if ($category_slug == 'coconut_milk') {
+                                                        echo 'active';
+                                                    } ?>" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><?php echo  $category; ?></a>
+
+
+                        <!-- <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a> -->
+
+                    <?php } ?>
 
 
                 </div>
@@ -67,11 +84,26 @@ get_header();
             <div class="tab-content" id="nav-tabContent">
 
 
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+                <?php
+                $products_coco_milk = new WP_Query("taxonomy=product_categories&term=coconut_milk");
+                if ($products_coco_milk->have_posts()) :
+                    while ($products_coco_milk->have_posts()) :
+                        $products_coco_milk->the_post();
 
+                ?>
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <?php the_title(); ?>
+                            <img src="<?php the_field('image_prod'); ?>">
 
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                        </div>
+
+                <?php
+                    endwhile;
+                endif;
+                ?>
+
+                <!-- <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div> -->
             </div>
         </div>
 
