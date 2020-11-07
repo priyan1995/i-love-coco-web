@@ -30,6 +30,8 @@ textdomain: ilovecoco
 
 p{
     font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: rgb(124, 124, 124);
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -785,4 +787,64 @@ section.l-c-banner {
 .pd-product-tab-home .nav-link.active .pd-cat-box{
     transition: 0.25s;
     background: #1b845a;
+}
+
+/*  ====== about us page ===== */
+
+.pd-about-main-inf h2{
+    font-size: 50px;
+    color: rgba(51, 53, 51,1);
+    text-align: left;
+    margin: 0;
+}
+
+.pd-about-main-inf h4{
+    font-size: 26px;
+    color: rgb(51, 53, 51);
+    line-height: 1.2;
+    text-align: left;
+}
+
+.pd-about-main-inf p{
+    font-size: 14px;
+    color: rgb(124, 124, 124);
+    line-height: 1.714;
+}
+
+.pd-vision-misison-sec{
+    background: #056240;
+}
+
+.pd-vision-misison-sec h2{
+    color: white;
+    font-size: 60px;
+}
+
+.pd-vision-misison-sec .pd-vision-para{
+    font-size: 14px;
+    color: white;
+    line-height: 25px;
+    font-weight: 300;
+}
+
+.pd-vision-misison-sec .pd-direct-message-card{
+    margin-top: 60px;
+    background: white;
+    margin-left: 50px;
+}
+
+.pd-vision-misison-sec .pd-direct-message-card .row{
+    align-items: center;
+}
+
+.pd-vision-misison-sec .pd-direct-message-card .col-lg-4{
+    position: relative;
+    min-height: 255px;
+}
+
+.pd-vision-misison-sec .pd-direct-message-card .col-lg-4 img{
+    width: 100%;
+    position: absolute;
+    top: -92px;
+    left: -50px;
 }
