@@ -151,6 +151,48 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    $('#pd-product-slider-inner').owlCarousel({
+        loop: true,
+        margin: 5,
+        nav: true,
+        dots: false,
+        autoplay: false,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+    
+    $('#pd-product-slider-inner-featured').owlCarousel({
+        loop: true,
+        margin: 5,
+        nav: true,
+        dots: false,
+        autoplay: false,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+
 
 });
 

@@ -67,7 +67,7 @@ get_header();
                                         <img src="<?php the_field('image_prod'); ?>">
                                         <h4><?php the_title(); ?></h4>
                                         <p><?php the_field('short_description_prod'); ?></p>
-                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                        <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
                                     </div>
 
                                 </div>
@@ -97,7 +97,7 @@ get_header();
                                         <img src="<?php the_field('image_prod'); ?>">
                                         <h4><?php the_title(); ?></h4>
                                         <p><?php the_field('short_description_prod'); ?></p>
-                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                        <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
                                     </div>
 
                                 </div>
@@ -127,7 +127,7 @@ get_header();
                                         <img src="<?php the_field('image_prod'); ?>">
                                         <h4><?php the_title(); ?></h4>
                                         <p><?php the_field('short_description_prod'); ?></p>
-                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                        <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
                                     </div>
 
                                 </div>
@@ -157,7 +157,7 @@ get_header();
                                         <img src="<?php the_field('image_prod'); ?>">
                                         <h4><?php the_title(); ?></h4>
                                         <p><?php the_field('short_description_prod'); ?></p>
-                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                        <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
                                     </div>
 
                                 </div>
@@ -187,7 +187,7 @@ get_header();
                                         <img src="<?php the_field('image_prod'); ?>">
                                         <h4><?php the_title(); ?></h4>
                                         <p><?php the_field('short_description_prod'); ?></p>
-                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                        <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
                                     </div>
 
                                 </div>
@@ -217,7 +217,7 @@ get_header();
                                         <img src="<?php the_field('image_prod'); ?>">
                                         <h4><?php the_title(); ?></h4>
                                         <p><?php the_field('short_description_prod'); ?></p>
-                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                        <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
                                     </div>
 
                                 </div>
@@ -247,7 +247,7 @@ get_header();
                                         <img src="<?php the_field('image_prod'); ?>">
                                         <h4><?php the_title(); ?></h4>
                                         <p><?php the_field('short_description_prod'); ?></p>
-                                        <a href="<?php the_permalink(); ?>">Read More</a>
+                                        <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
                                     </div>
 
                                 </div>
@@ -315,7 +315,7 @@ get_header();
                     <h4>Japanese organic <br>
                         Certification</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="">Read More</a>
+                    <a href="" class="hover-green">Read More</a>
                 </div>
             </div>
 
@@ -325,7 +325,7 @@ get_header();
                     <h4>Japanese organic <br>
                         Certification</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="">Read More</a>
+                    <a href="" class="hover-green">Read More</a>
                 </div>
             </div>
             <div class="item text-center">
@@ -334,7 +334,7 @@ get_header();
                     <h4>Japanese organic <br>
                         Certification</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="">Read More</a>
+                    <a href="" class="hover-green">Read More</a>
                 </div>
             </div>
 
@@ -344,7 +344,7 @@ get_header();
                     <h4>Japanese organic <br>
                         Certification</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="">Read More</a>
+                    <a href="" class="hover-green">Read More</a>
                 </div>
             </div>
         </div>
@@ -393,7 +393,7 @@ get_header();
                                 <div class="pd-content-card">
                                     <h4>Japanese organic Certification</h4>
                                     <p style="height: 68px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                                    <a href="">Read More</a>
+                                    <a href="" class="hover-green">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -407,7 +407,7 @@ get_header();
                                 <div class="pd-content-card">
 
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                                    <a href="">Read More</a>
+                                    <a href="" class="hover-green">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -421,7 +421,7 @@ get_header();
                                 <div class="pd-content-card">
 
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                                    <a href="">Read More</a>
+                                    <a href="" class="hover-green">Read More</a>
                                 </div>
                             </div>
                         </div>

@@ -35,7 +35,7 @@ get_header();
     </section>
 
 
-    <section class="pd-vision-misison-sec l-c-p-t-b-3">
+    <section class="pd-vision-misison-sec l-c-p-t-b-3" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/abt-back.png);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -185,66 +185,66 @@ get_header();
 
 
     <section class="l-c-certificate-sec l-c-p-t-b-5 pad-t-5">
-    <div class="container">
-        <h2>Our Certifications</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
+        <div class="container">
+            <h2>Our Certifications</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur</p>
 
-        <div class="owl-carousel owl-theme" id="pd-cert-slider">
-            <div class="item text-center">
-                <div class="pd-cert-card">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                    <h4>Japanese organic <br>
-                        Certification</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="">Read More</a>
+            <div class="owl-carousel owl-theme" id="pd-cert-slider">
+                <div class="item text-center">
+                    <div class="pd-cert-card">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
+                        <h4>Japanese organic <br>
+                            Certification</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
+                        <a href="" class="hover-green">Read More</a>
+                    </div>
+                </div>
+
+                <div class="item text-center">
+                    <div class="pd-cert-card">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-3.png">
+                        <h4>Japanese organic <br>
+                            Certification</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
+                        <a href="" class="hover-green">Read More</a>
+                    </div>
+                </div>
+                <div class="item text-center">
+                    <div class="pd-cert-card">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-2.png">
+                        <h4>Japanese organic <br>
+                            Certification</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
+                        <a href="" class="hover-green">Read More</a>
+                    </div>
+                </div>
+
+                <div class="item text-center">
+                    <div class="pd-cert-card">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
+                        <h4>Japanese organic <br>
+                            Certification</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
+                        <a href="" class="hover-green"> Read More</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="item text-center">
-                <div class="pd-cert-card">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-3.png">
-                    <h4>Japanese organic <br>
-                        Certification</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-            <div class="item text-center">
-                <div class="pd-cert-card">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-2.png">
-                    <h4>Japanese organic <br>
-                        Certification</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
 
-            <div class="item text-center">
-                <div class="pd-cert-card">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                    <h4>Japanese organic <br>
-                        Certification</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
         </div>
 
-
-    </div>
-
-</section>
+    </section>
 
 
-<section class="l-c-contact-sec l-c-p-t-b-5" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
-    <div class="container">
-        <h2>Get a Free Quotation</h2>
-        <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
+    <section class="l-c-contact-sec l-c-p-t-b-5" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
+        <div class="container">
+            <h2>Get a Free Quotation</h2>
+            <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
 
-        <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form home"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form home"]'); ?>
 
-    </div>
-</section>
+        </div>
+    </section>
 
 
 
