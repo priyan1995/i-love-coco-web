@@ -55,14 +55,33 @@ get_header();
                 </div>
                 <div class="col-lg-8">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minima quae inventore nisi quaerat assumenda vitae aspernatur architecto, dolore, praesentium, labore sint numquam earum error! Dolore repudiandae inventore minima neque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minima quae inventore nisi quaerat assumenda vitae aspernatur architecto, dolore, praesentium, labore sint numquam earum error! Dolore repudiandae inventore minima neque.</p>
+                    <br>
+
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/sign.png" style="margin-bottom: 10px;">
+                    <h5>Name Here</h5>
+                    <p>Managing Director - I Love Coco</p>
                 </div>
             </div>
-        </div>
-            
+        </div>          
 
 
         </div>
     </section>
+
+<section class="pd-we-different-sec l-c-p-t-b-3">
+    <div class="container">
+
+    <!-- card -->
+    <div class="row">
+        <div class="col-lg-6"></div>
+        <div class="col-lg-6"></div>
+    </div>
+
+    </div>
+</section>
+
+
+
 
 </div>
 
