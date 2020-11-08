@@ -1127,3 +1127,128 @@ section.l-c-banner {
     width: 75%;
     text-align: right;
 }
+
+/* sustainability section */
+.pd-sustainability-section .pd-content-n-e{
+    box-shadow: 0px 5px 24px -12px #00000063;
+    padding: 20px;
+}
+
+.pd-sustainability-section .pd-content-n-e p{
+    margin-bottom:5px;
+}
+
+.pd-sustainability-section .pd-content-n-e a.hover-green{
+    background: rgba(51, 53, 51,1);
+    border-radius: 0;
+    padding: 5px 14px 6px !important;
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.pd-sustainability-section .pd-sustainability-img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.pd-sustainability-section h2{
+    font-size: 45px;
+    color: rgba(51, 53, 51,1);
+    line-height: 50px;
+    text-align: center;
+}
+
+.pd-sustainability-section .main-para{
+    font-size: 20px;
+    color: rgba(51, 53, 51,1);
+    text-align: center;
+    font-weight: 300;
+}
+
+.pd-f-t-section {
+    background: #f4f4f5;
+}
+
+.pd-f-t-section .main-para{
+    font-size: 20px;
+    color: rgba(51, 53, 51,1);
+    text-align: center;
+    font-weight: 300;
+}
+.pd-f-t-section  .pd-content-n-e{
+    box-shadow: 0px 5px 24px -12px #00000063;
+    padding: 20px;
+    background: white;
+}
+
+.pd-f-t-section  .pd-content-n-e p{
+    margin-bottom:5px;
+}
+
+.pd-f-t-section  .pd-content-n-e a.hover-green{
+    background: rgba(51, 53, 51,1);
+    border-radius: 0;
+    padding: 5px 14px 6px !important;
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.pd-f-t-section  .pd-sustainability-img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.pd-f-t-section  h2{
+    font-size: 45px;
+    color: rgba(51, 53, 51,1);
+    line-height: 50px;
+    text-align: center;
+}
+
+.pd-f-t-section .owl-carousel,
+.pd-sustainability-section .owl-carousel{
+    position: relative;
+}
+
+.pd-f-t-section .owl-carousel .owl-nav,
+.pd-sustainability-section .owl-carousel .owl-nav{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.pd-f-t-section .owl-carousel .owl-nav button.owl-prev,
+.pd-sustainability-section .owl-carousel .owl-nav button.owl-prev{
+    float: left;
+    background: url('http://localhost/ilovecoco/wp-content/uploads/2020/11/arrow.png') !important;
+    color: transparent !important;
+    width: 60px;
+    height: 60px;
+    background-color: transparent !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    transform: rotate(180deg);
+}
+
+.pd-f-t-section .owl-carousel .owl-nav button.owl-next,
+.pd-sustainability-section .owl-carousel .owl-nav button.owl-next{
+    float: right;
+    background: url('http://localhost/ilovecoco/wp-content/uploads/2020/11/arrow.png') !important;
+    color: transparent !important;
+    width: 60px;
+    height: 60px;
+    background-color: transparent !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
