@@ -12,7 +12,7 @@ get_header();
     </div>
 </section>
 
-<section class="l-c-abt-sec l-c-p-t-b-3 pad-b-5">
+<section class="l-c-abt-sec l-c-p-t-b-5 pad-b-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -40,7 +40,7 @@ get_header();
     </div>
 </section>
 
-<section class="l-c-product-sec l-c-p-t-b-3" >
+<section class="l-c-product-sec l-c-p-t-b-5" >
     <div class="container">
         <h2>Products</h2>
         <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
@@ -303,7 +303,7 @@ get_header();
     </div>
 </section>
 
-<section class="l-c-certificate-sec l-c-p-t-b-3 pad-t-5">
+<section class="l-c-certificate-sec l-c-p-t-b-5 pad-t-5">
     <div class="container">
         <h2>Our Certifications</h2>
         <p>Lorem ipsum dolor sit amet, consectetur</p>
@@ -355,7 +355,7 @@ get_header();
 </section>
 
 
-<section class="l-c-u-tube-video-sec l-c-p-t-b-3" style="padding-bottom: 0;">
+<section class="l-c-u-tube-video-sec l-c-p-t-b-5" style="padding-bottom: 0;">
     <div class="pd-win-win-sec-video">
         <div class="video-background">
             <div class="video-foreground">
@@ -365,7 +365,7 @@ get_header();
     </div>
 </section>
 
-<section class="l-c-news-events l-c-p-t-b-3">
+<section class="l-c-news-events l-c-p-t-b-5">
     <div class="container">
 
         <h2 class="text-center">News and Events</h2>
@@ -440,7 +440,7 @@ get_header();
 
 
 
-<section class="l-c-contact-sec l-c-p-t-b-3" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
+<section class="l-c-contact-sec l-c-p-t-b-5" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
     <div class="container">
         <h2>Get a Free Quotation</h2>
         <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>

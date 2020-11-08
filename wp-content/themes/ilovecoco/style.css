@@ -63,6 +63,10 @@ button{
     outline: none !important;
 }
 
+.pd-aligned-center{
+    align-items: center;
+}
+
 
 /* banner */
 
@@ -160,7 +164,7 @@ section.l-c-banner {
     padding: 30px 30px;
     box-shadow: 0px 15px 29px -19px #0000003d;
     transition: 0.5s;
-    border: 1px solid #80808024;
+    /* border: 1px solid #80808024; */
 }
 
 .l-c-certificate-sec .pd-cert-card:hover{
@@ -813,6 +817,7 @@ section.l-c-banner {
 
 .pd-vision-misison-sec{
     background: #056240;
+    padding: 3% 0 7%;
 }
 
 .pd-vision-misison-sec h2{
@@ -848,4 +853,102 @@ section.l-c-banner {
     position: absolute;
     top: -92px;
     left: -50px;
+}
+
+.pd-vision-misison-sec .pd-direct-message-card h5{
+    color: rgb(51, 53, 51);
+}
+
+/* why we are different section */
+.pd-we-different-sec h2 {
+    font-size: 45px;
+    color: rgb(51, 53, 51);
+    line-height: 50px;
+    text-align: center;
+}
+.pd-we-different-sec .main-para {
+    font-size: 20px;
+    color: rgb(51, 53, 51);
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.pd-we-different-sec .owl-nav{
+    right: 80px;
+    bottom: 20px;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.pd-we-different-sec .owl-carousel .owl-nav button.owl-prev {
+    background: rgba(51, 53, 51,1) ;
+    border-radius: 0 ;
+    padding: 0px 13px 8px ;
+    color: white ;
+    font-size: 30px ;
+    font-weight: 100 ;
+    line-height: 26px ;
+}
+
+.pd-we-different-sec .owl-carousel .owl-nav button.owl-next {
+    background: rgba(51, 53, 51,1) ;
+    border-radius: 0 ;  
+    color: white ;
+    font-size: 30px ;
+    font-weight: 100 ;
+    line-height: 26px ;
+}
+
+.pd-we-different-sec .owl-carousel .owl-nav button.owl-next,.pd-we-different-sec .owl-carousel .owl-nav button.owl-prev{
+    padding: 0px 13px 8px !important;
+}
+
+.pd-we-different-sec .pd-aligned-center{
+    margin: 40px 0;
+}
+
+.pd-about-wrapper .l-c-certificate-sec{
+    background: #f4f4f5;
+}
+
+.pd-about-wrapper .l-c-certificate-sec .pd-cert-card:hover{
+    background: white ;
+}
+
+.pd-inner-banner{
+    display: flex;
+    background-repeat: no-repeat;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    background-position: center bottom;
+    background-size: 100%;
+}
+
+.pd-inner-banner .pd-breadcrumb{
+    padding-bottom:50px ;
+}
+
+.pd-inner-banner .pd-breadcrumb h3{   
+    font-size: 45px;
+    color: white; 
+}
+
+.pd-inner-banner .pd-breadcrumb a{
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif;   
+    font-weight: 300;   
+}
+
+.pd-inner-banner .pd-breadcrumb a:hover{
+    text-decoration: none;
+}
+
+.pd-inner-banner .pd-breadcrumb span{
+   font-family: 'Roboto Slab', serif;
+   color: white;
+   font-weight: 300;
+      
 }
