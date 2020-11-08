@@ -11,13 +11,34 @@ get_header();
     </section>
 
 
-<section class="pd-contact-card-sec">
-    <div class="container">
-        <div class="pd-contact-card">
-            
+    <section class="pd-contact-card-sec l-c-p-t-b-5">
+        <div class="container">
+            <div class="pd-contact-inf-card">
+                <div class="row">
+                    <div class="col-lg-5 pd-cont-card-left-img">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/contact-image.png);" class="w-100">
+                    </div>
+                    <div class="col-lg-7 pd-cont-card-right-content">
+                        <h2 class="pd-common-h2">Get a Free Quotation</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id enim quod necessitatibus distinctio voluptas modi deleniti, ducimus hic libero culpa expedita quae, alias sit. Ut, nam? Hic ab dolore similique.</p>
+                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png" class="pd-cont-card-icons"></span>47, Lorem Ipsum, Doler.</p>
+                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png" class="pd-cont-card-icons"></span>info@gmail.com</p>
+                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png" class="pd-cont-card-icons"></span>+91 456 12347</p>
+                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/whatsap.png" class="pd-cont-card-icons"></span>+98 456 7891</p>
+
+                        <div class="pd-footer-links pull-right">
+                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png"></a>
+                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png"></a>
+                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png"></a>
+                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/whatsap.png"></a>
+                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/insta.png"></a>
+                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/youtube.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
