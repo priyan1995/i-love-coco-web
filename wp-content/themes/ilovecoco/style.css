@@ -648,6 +648,15 @@ section.l-c-banner {
     transition: 0.5s;
 }
 
+#main-menu .pd-remove-hover .dropdown-menu li a::after{
+    display: none;
+}
+
+
+#main-menu .dropdown-toggle::after{
+    border: none !important;
+}
+
 /* sticky menu */
 
 .sticky {
@@ -1251,4 +1260,15 @@ section.l-c-banner {
     background-position: center !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
+}
+
+/* product view page */
+
+.pd-featured-prod .pd-prod-card-home a{
+    font-size: 14px;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    background: rgba(51, 53, 51,1);
+    padding: 5px 10px 7px;
+    display: inline-block;
 }
