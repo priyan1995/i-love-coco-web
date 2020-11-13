@@ -52,12 +52,12 @@ $term = get_queried_object();
                 ?>
 
 
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 m-b-20">
                             <div class="pd-prod-card-home text-center">
                                 <img src="<?php the_field('image_prod'); ?>">
                                 <h4><?php the_title(); ?></h4>
                                 <p><?php the_field('short_description_prod'); ?></p>
-                                <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
+                                <a href="<?php the_permalink(); ?>" class="hover-green black-btn" >Read More</a>
                             </div>
 
                         </div>

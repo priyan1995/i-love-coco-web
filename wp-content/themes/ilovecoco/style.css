@@ -1320,3 +1320,20 @@ section.l-c-banner {
  .l-c-certificate-sec.gray-back .pd-cert-card:hover{
     background: white ;
 }
+
+.black-btn{
+    font-size: 14px;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    background: rgba(51, 53, 51,1);
+    padding: 5px 10px 7px;
+    display: inline-block;
+}
+
+.black-btn:hover{
+    color: white;
+}
+
+.m-b-20{
+    margin-bottom: 20px;
+}
