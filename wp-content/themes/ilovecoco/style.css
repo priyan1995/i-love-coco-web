@@ -1272,3 +1272,40 @@ section.l-c-banner {
     padding: 5px 10px 7px;
     display: inline-block;
 }
+
+#category-menu{
+    display: flex;
+    flex-direction: inherit;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+#category-menu li a{
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 15px 20px 17px;
+    font-family: 'Roboto Slab', serif;
+}
+
+#category-menu li{
+    width: 100%;
+    background: gray;
+    transition: 0.5s;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 24%;
+    max-width: 24%;
+    margin: 2px;
+    text-align: center;
+}
+
+#category-menu li.active{
+    background: #087a45;
+    transition:0.5s;
+}
+
+.category-menu-wrap{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}

@@ -39,6 +39,7 @@ function register_nero_primary_menu() {
 		'primary'	=> 	__( 'Primary Menu', 'I love coco Web' ),
 		'footer'	=>	__( 'Footer Menu', 'I love coco Web' ),
 		'product'	=>	__( 'Product Menu', 'I love coco Web' ),
+		'category'	=>	__( 'Category Menu', 'I love coco Web' ),
 
 	 ));
 }
