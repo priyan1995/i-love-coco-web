@@ -35,30 +35,30 @@ get_header();
     </section>
 
 
-    <section class="pd-vision-misison-sec l-c-p-t-b-3" style="background-image: url(<?php  bloginfo('template_url'); ?>/assets/img/abt-back.png);">
+    <section class="pd-vision-misison-sec l-c-p-t-b-3" style="background-image: url(<?php bloginfo('template_url'); ?>/assets/img/abt-back.png);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <h2>Vision</h2>
-                    <p class="pd-vision-para"><?php  the_field('vision_abt'); ?></p>
+                    <p class="pd-vision-para"><?php the_field('vision_abt'); ?></p>
                 </div>
                 <div class="col-lg-6">
                     <h2>Mission</h2>
-                    <p class="pd-vision-para"><?php  the_field('mission_abt'); ?></p>
+                    <p class="pd-vision-para"><?php the_field('mission_abt'); ?></p>
                 </div>
             </div>
 
             <div class="pd-direct-message-card">
                 <div class="row">
                     <div class="col-lg-4">
-                        <img src="<?php  the_field('directors_image_abt'); ?>">
+                        <img src="<?php the_field('directors_image_abt'); ?>">
                     </div>
                     <div class="col-lg-8">
-                        <p><?php  the_field('directors_message_abt'); ?></p>
+                        <p><?php the_field('directors_message_abt'); ?></p>
                         <br>
 
                         <img src="<?php echo the_field('directors_signature_abt'); ?>" style="margin-bottom: 10px;">
-                        <h5><?php  the_field('directors_name_abt'); ?></h5>
+                        <h5><?php the_field('directors_name_abt'); ?></h5>
                         <p><?php the_field('directors_position_abt'); ?></p>
                     </div>
                 </div>
@@ -71,8 +71,8 @@ get_header();
     <section class="pd-we-different-sec l-c-p-t-b-5">
         <div class="container">
 
-            <h2><?php  the_field('title_ww'); ?></h2>
-            <p class="main-para"><?php  the_field('description_ww'); ?></p>
+            <h2><?php the_field('title_ww'); ?></h2>
+            <p class="main-para"><?php the_field('description_ww'); ?></p>
 
             <!-- card -->
             <div class="row pd-aligned-center">
@@ -175,48 +175,31 @@ get_header();
 
     <section class="l-c-certificate-sec l-c-p-t-b-5 pad-t-5">
         <div class="container">
-            <h2>Our Certifications</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
+            <h2><?php the_field('title_cert_abt'); ?></h2>
+            <p><?php the_field('description_abt_cert'); ?></p>
 
             <div class="owl-carousel owl-theme" id="pd-cert-slider">
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green">Read More</a>
-                    </div>
-                </div>
+                <?php
+                $certificates  = new WP_Query(array("post_type" => "certifications", "order" => "DESC"));
+                if ($certificates->have_posts()) :
+                    while ($certificates->have_posts()) :
+                        $certificates->the_post();
 
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-3.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green">Read More</a>
-                    </div>
-                </div>
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-2.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green">Read More</a>
-                    </div>
-                </div>
+                ?>
+                        <div class="item text-center">
+                            <div class="pd-cert-card">
+                                <img src="<?php the_field('image_cert'); ?>">
+                                <h4><?php the_title(); ?></h4>
+                                <p><?php the_field('short_description_cert'); ?></p>
+                                <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
+                            </div>
+                        </div>
+                <?php
+                    endwhile;
+                endif;
+                wp_reset_query();
+                ?>
 
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green"> Read More</a>
-                    </div>
-                </div>
             </div>
 
 
@@ -227,8 +210,8 @@ get_header();
 
     <section class="l-c-contact-sec l-c-p-t-b-5" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
         <div class="container">
-            <h2>Get a Free Quotation</h2>
-            <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
+            <h2><?php the_field('title_contact_cert_abt'); ?></h2>
+            <p class="main-para"><?php the_field('description_cert_abt'); ?></p>
 
             <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form home"]'); ?>
 
