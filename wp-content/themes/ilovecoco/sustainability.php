@@ -21,9 +21,9 @@ get_header();
     <section class="pd-sustainability-section  l-c-p-t-b-5">
         <div class="container">
 
-            <h2>Fair Trade Activities</h2>
-            <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
-            <p class="text-center pd-pad-bot-30">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis totam, aspernatur odit iste nisi sint fugit et explicabo vero voluptas aperiam obcaecati natus laborum a reprehenderit soluta ipsam maxime tempora.Perferendis totam, aspernatur odit iste nisi sint fugit et explicabo vero voluptas aperiam obcaecati natus laborum a reprehenderit soluta ipsam maxime tempora.</p>
+            <h2><?php the_field('main_title_01_csr'); ?></h2>
+            <p class="main-para"><?php the_field('sub_title_csr_1'); ?></p>
+            <p class="text-center pd-pad-bot-30"><?php the_field('main_description_01_csr'); ?></p>
 
 
             <div class="row">
@@ -86,9 +86,9 @@ get_header();
     <section class="pd-f-t-section  l-c-p-t-b-5">
         <div class="container">
 
-            <h2>CSR Initiatives</h2>
-            <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
-            <p class="text-center pd-pad-bot-30">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis totam, aspernatur odit iste nisi sint fugit et explicabo vero voluptas aperiam obcaecati natus laborum a reprehenderit soluta ipsam maxime tempora.Perferendis totam, aspernatur odit iste nisi sint fugit et explicabo vero voluptas aperiam obcaecati natus laborum a reprehenderit soluta ipsam maxime tempora.</p>
+            <h2><?php the_field('main_title_02_csr'); ?></h2>
+            <p class="main-para"><?php the_field('sub_title_csr_2'); ?></p>
+            <p class="text-center pd-pad-bot-30"><?php the_field('main_description_02_csr'); ?></p>
 
 
             <div class="row">
@@ -151,8 +151,8 @@ get_header();
 
     <section class="l-c-contact-sec l-c-p-t-b-5" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
         <div class="container">
-            <h2>Get a Free Quotation</h2>
-            <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
+            <h2><?php the_field('contact_form_title_csr'); ?></h2>
+            <p class="main-para"><?php the_field('contact_from_subtitle_csr'); ?></p>
 
             <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form home"]'); ?>
 
