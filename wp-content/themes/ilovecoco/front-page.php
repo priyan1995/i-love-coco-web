@@ -40,7 +40,7 @@ get_header();
     </div>
 </section>
 
-<section class="l-c-product-sec l-c-p-t-b-5" >
+<section class="l-c-product-sec l-c-p-t-b-5">
     <div class="container">
         <h2>Products</h2>
         <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
@@ -261,6 +261,67 @@ get_header();
                     </div>
                 </div>
 
+                <!-- ==== bulk -->
+                <div class="tab-pane fade" id="buy-in-bulk" role="tabpanel" aria-labelledby="buy-in-bulk-tab">
+                    <div class="row">
+
+                        <?php
+                        $products_coco_cream  = new WP_Query(array("taxonomy" => "product_categories", "term" => "buy-in-bulk", "posts_per_page" => "8"));
+                        if ($products_coco_cream->have_posts()) :
+                            while ($products_coco_cream->have_posts()) :
+                                $products_coco_cream->the_post();
+
+                        ?>
+                                <div class="col-lg-3">
+                                    <div class="pd-prod-card-home text-center">
+                                        <img src="<?php the_field('image_prod'); ?>">
+                                        <h4><?php the_title(); ?></h4>
+                                        <p><?php the_field('short_description_prod'); ?></p>
+                                        <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
+                                    </div>
+
+                                </div>
+
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query();
+                        ?>
+
+                    </div>
+                </div>
+
+                <!-- ==== Organic Aseptic Coconut -->
+                <div class="tab-pane fade" id="organic-aseptic-coconut" role="tabpanel" aria-labelledby="organic-aseptic-coconut-tab">
+                    <div class="row">
+
+                        <?php
+                        $products_coco_cream  = new WP_Query(array("taxonomy" => "product_categories", "term" => "organic-aseptic-coconut", "posts_per_page" => "8"));
+                        if ($products_coco_cream->have_posts()) :
+                            while ($products_coco_cream->have_posts()) :
+                                $products_coco_cream->the_post();
+
+                        ?>
+                                <div class="col-lg-3">
+                                    <div class="pd-prod-card-home text-center">
+                                        <img src="<?php the_field('image_prod'); ?>">
+                                        <h4><?php the_title(); ?></h4>
+                                        <p><?php the_field('short_description_prod'); ?></p>
+                                        <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
+                                    </div>
+
+                                </div>
+
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_query();
+                        ?>
+
+                    </div>
+                </div>
+
+
 
             </div>
 
@@ -271,7 +332,7 @@ get_header();
 
                 $terms = get_terms(array(
                     'taxonomy' => 'product_categories',
-                    'hide_empty' => true,
+                    'hide_empty' => false,
                     'post_type' => 'products'
                 ));
 
@@ -284,13 +345,12 @@ get_header();
                 ?>
 
 
-                    <li class="col-lg-2 nav-item">
+                    <li class="col-lg-3 nav-item">
                         <a class="nav-link <?php if ($category_slug == 'coconut_milk') {
                                                 echo 'active show';
                                             } ?>" id="<?php echo $category_slug; ?>-tab" data-toggle="tab" href="#<?php echo $category_slug; ?>" role="tab" aria-controls="<?php echo $category_slug; ?>" aria-selected="true">
 
                             <div class="pd-cat-box">
-                                <img src="<?php echo $category_image; ?> ">
                                 <h4><?php echo  $category; ?></h4>
                             </div>
                         </a>

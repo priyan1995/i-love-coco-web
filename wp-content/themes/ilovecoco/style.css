@@ -825,13 +825,16 @@ section.l-c-banner {
 }
 
 .pd-product-tab-home .pd-cat-box h4{
-        color: white;
-        font-size: 14px;
-        padding-top: 15px;
+    color: white;
+    font-size: 12px;
+    padding-top: 10px;
+    text-transform: uppercase;
 }
 
-.pd-product-tab-home .nav-tabs .nav-item{
+.pd-product-tab-home .nav-tabs .nav-item{  
     padding: 0;
+    margin: 3px 0px;
+
 }
 
 .pd-product-tab-home #nav-tab {
@@ -1308,4 +1311,12 @@ section.l-c-banner {
 .category-menu-wrap{
     margin-top: 30px;
     margin-bottom: 20px;
+}
+
+.l-c-certificate-sec.gray-back {
+    background: #f4f4f5;
+}
+
+ .l-c-certificate-sec.gray-back .pd-cert-card:hover{
+    background: white ;
 }
