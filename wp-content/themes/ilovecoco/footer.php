@@ -48,19 +48,46 @@
             </div>
             <div class="col-lg-4 pd-inf-footer">
                 <h4>Information</h4>
-                <p>Address: No. 47, Industrial Estate,
-                    Dankotuwa, Sri Lanka.</p>
-                <p>Tel: +94 31 226 5607</p>
-                <p>Fax: +94 31 226 5608</p>
-                <p>E-mail. info@ilovecoco.co</p>
+                <p>Address: <?php echo get_option('address'); ?></p>
+                <p>Tel: <?php echo get_option('contact_number'); ?></p>
+                <p>Fax: <?php echo get_option('fax'); ?></p>
+                <p>E-mail. <?php echo get_option('email'); ?></p>
 
                 <div class="pd-footer-links">
-                    <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png"></a>
-                    <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png"></a>
-                    <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png"></a>
-                    <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/whatsap.png"></a>
-                    <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/insta.png"></a>
-                    <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/youtube.png"></a>
+                   <?php 
+                   
+                   $youtube = get_option('youtube_link'); 
+                   $linkeding = get_option('linkedin'); 
+                   $facebook = get_option('facebook_url'); 
+                   $twitter = get_option('twitter_url'); 
+                   $whatsap = get_option('whatsap_number'); 
+                   $insta = get_option('insta_url'); 
+                   
+                   ?>
+                   
+                   <?php if($linkeding){ ?>
+                   <a href="<?php echo $linkeding ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png"></a>
+                   <?php } ?>
+
+                   <?php if($facebook){ ?>
+                    <a href="<?php echo $facebook ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png"></a>
+                    <?php } ?>
+
+                    <?php if($twitter){ ?>
+                    <a href="<?php echo $twitter ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png"></a>
+                     <?php } ?>
+
+                    <?php if($whatsap){ ?>
+                    <a href="<?php echo $whatsap ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/whatsap.png"></a>
+                     <?php } ?>
+
+                    <?php if($insta){ ?>
+                    <a href="<?php echo $insta ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/insta.png"></a>
+                     <?php } ?>
+
+                    <?php if($youtube){ ?>
+                    <a href="<?php echo $youtube ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/youtube.png"></a>
+                     <?php } ?>
                 </div>
             </div>
         </div>

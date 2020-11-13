@@ -121,7 +121,7 @@ function theme_options_setting()
 
   add_settings_field(
     "twitter_url",
-    "LinkedIn Url",
+    "Twitter Url",
     "display_twitt_url",
     "theme-options",
     "section"
@@ -138,6 +138,79 @@ function theme_options_setting()
   );
 
   add_settings_field(
+    "linkedin",
+    "linkedin Link",
+    "display_linkedin_link",
+    "theme-options",
+    "section"
+
+  );
+
+  add_settings_field(
+    "whatsap_number",
+    "Whatsapp Number",
+    "display_whatsap_number",
+    "theme-options",
+    "section"
+
+  );
+
+  add_settings_field(
+    "youtube_link",
+    "Youtube Link",
+    "display_youtube_link",
+    "theme-options",
+    "section"
+
+  );
+
+
+  add_settings_field(
+    "address",
+    "Address",
+    "display_address",
+    "theme-options",
+    "section"
+
+  );
+
+  add_settings_field(
+    "contact_number",
+    "Contact Number",
+    "display_contact_number",
+    "theme-options",
+    "section"
+
+  );
+
+  add_settings_field(
+    "fax",
+    "Fax",
+    "display_fax",
+    "theme-options",
+    "section"
+
+  );
+
+  add_settings_field(
+    "email",
+    "Email",
+    "display_email",
+    "theme-options",
+    "section"
+
+  );
+
+
+
+
+
+
+
+
+
+
+  add_settings_field(
     "footer_text",
     "Footer Text",
     "display_footer_text",
@@ -146,6 +219,10 @@ function theme_options_setting()
 
   );
 
+ 
+
+
+
 
 
   // we need to add this setting to area
@@ -153,6 +230,15 @@ function theme_options_setting()
   register_setting("section", "facebook_url");
   register_setting("section", "twitter_url");
   register_setting("section", "insta_url");
+  register_setting("section", "linkedin");
+  register_setting("section", "whatsap_number");
+  register_setting("section", "youtube_link");
+  register_setting("section", "address");
+  register_setting("section", "contact_number");
+  register_setting("section", "fax");
+  register_setting("section", "email");
+
+
   register_setting("section", "footer_text");
 }
 
@@ -175,6 +261,55 @@ function display_insta_url(){
   <input type="url" name="insta_url" value="<?php echo get_option('insta_url'); ?>" id="insta_url" /> 
 <?php
 }
+
+function display_whatsap_number(){
+  ?>
+  <input type="text" name="whatsap_number" value="<?php echo get_option('whatsap_number'); ?>" id="whatsap_number" /> 
+<?php
+}
+
+
+function display_linkedin_link(){
+  ?>
+  <input type="url" name="linkedin" value="<?php echo get_option('linkedin'); ?>" id="linkedin" /> 
+<?php
+}
+
+function display_youtube_link(){
+  ?>
+  <input type="url" name="youtube_link" value="<?php echo get_option('youtube_link'); ?>" id="youtube_link" /> 
+<?php
+}
+
+
+function display_address(){
+  ?>
+  <input type="text" name="address" value="<?php echo get_option('address'); ?>" id="address" /> 
+<?php
+}
+
+function display_contact_number(){
+  ?>
+  <input type="text" name="contact_number" value="<?php echo get_option('contact_number'); ?>" id="contact_number" /> 
+<?php
+}
+
+function display_fax(){
+  ?>
+  <input type="text" name="fax" value="<?php echo get_option('fax'); ?>" id="fax" /> 
+<?php
+}
+
+
+function display_email(){
+  ?>
+  <input type="email" name="email" value="<?php echo get_option('email'); ?>" id="email" /> 
+<?php
+}
+
+
+
+
 
 function display_footer_text(){
 	?>
