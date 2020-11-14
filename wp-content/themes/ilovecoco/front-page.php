@@ -17,24 +17,41 @@ get_header();
         <div class="row">
             <div class="col-lg-6">
                 <div class="owl-carousel owl-theme" id="pd-abt-main-slider">
-                    <div class="item">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/abt-main-img.png">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/abt-main-img.png">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/abt-main-img.png">
-                    </div>
+
+                    <?php
+
+                    $image1 = get_field('slider_image_1_sec_1');
+                    $image2 = get_field('slider_image_2_sec_1');
+                    $image3 = get_field('slider_image_3_sec_2');
+
+                    ?>
+
+                    <?php if ($image1) { ?>
+                        <div class="item">
+                            <img src="<?php echo $image1; ?>">
+                        </div>
+                    <?php } ?>
+
+                    <?php if ($image2) { ?>
+                        <div class="item">
+                            <img src="<?php echo $image2; ?>">
+                        </div>
+                    <?php } ?>
+
+                    <?php if ($image3) { ?>
+                        <div class="item">
+                            <img src="<?php echo $image3; ?>">
+                        </div>
+                    <?php } ?>
+
+
+
                 </div>
             </div>
             <div class="col-lg-6">
-                <h3>I love coco</h3>
-                <h4>Coconut products manufacturer
-                    & wholesaler</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad culpa possimus ducimus? Autem qui vel, recusandae eos, officia dolorum doloremque iste, omnis aperiam numquam nihil. Quae doloremque similique recusandae commodi. Ad culpa possimus ducimus? Autem qui vel, recusandae eos, officia dolorum doloremque iste, omnis aperiam numquam nihil. Quae doloremque similique recusandae commodi</p>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad culpa possimus ducimus? Autem qui vel, recusandae eos, officia dolorum doloremque iste, omnis aperiam numquam nihil. </p>
+                <h3><?php the_field('main_title_sec_1') ?></h3>
+                <h4><?php the_field('sub_title_sec_1'); ?></h4>
+                <?php the_field('description_sec_1'); ?>
             </div>
         </div>
     </div>
@@ -42,8 +59,8 @@ get_header();
 
 <section class="l-c-product-sec l-c-p-t-b-5">
     <div class="container">
-        <h2>Products</h2>
-        <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
+        <h2><?php the_field('heading_product_tab'); ?></h2>
+        <p class="main-para"><?php the_field('sub_heading_product_tab'); ?></p>
 
 
 
@@ -365,48 +382,34 @@ get_header();
 
 <section class="l-c-certificate-sec l-c-p-t-b-5 pad-t-5">
     <div class="container">
-        <h2>Our Certifications</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur</p>
+        <h2><?php the_field('heading_certification_tab'); ?></h2>
+        <p><?php the_field('heading_sub_heading'); ?></p>
 
         <div class="owl-carousel owl-theme" id="pd-cert-slider">
-            <div class="item text-center">
-                <div class="pd-cert-card">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                    <h4>Japanese organic <br>
-                        Certification</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="" class="hover-green">Read More</a>
-                </div>
-            </div>
 
-            <div class="item text-center">
-                <div class="pd-cert-card">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-3.png">
-                    <h4>Japanese organic <br>
-                        Certification</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="" class="hover-green">Read More</a>
-                </div>
-            </div>
-            <div class="item text-center">
-                <div class="pd-cert-card">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-2.png">
-                    <h4>Japanese organic <br>
-                        Certification</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="" class="hover-green">Read More</a>
-                </div>
-            </div>
+            <?php
+            $certificates  = new WP_Query(array("post_type" => "certifications", "order" => "DESC"));
+            if ($certificates->have_posts()) :
+                while ($certificates->have_posts()) :
+                    $certificates->the_post();
 
-            <div class="item text-center">
-                <div class="pd-cert-card">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                    <h4>Japanese organic <br>
-                        Certification</h4>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                    <a href="" class="hover-green">Read More</a>
-                </div>
-            </div>
+            ?>
+
+                    <div class="item text-center">
+                        <div class="pd-cert-card">
+                            <img src="<?php the_field('image_cert'); ?>">
+                            <h4><?php the_title(); ?></h4>
+                            <p><?php the_field('short_description_cert'); ?></p>
+                            <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
+                        </div>
+                    </div>
+
+            <?php
+                endwhile;
+            endif;
+            wp_reset_query();
+            ?>
+
         </div>
 
 
@@ -419,7 +422,7 @@ get_header();
     <div class="pd-win-win-sec-video">
         <div class="video-background">
             <div class="video-foreground">
-                <iframe src="https://www.youtube.com/embed/9xwazD5SyVg?showinfo=0&rel=0&autoplay=0&loop=1" frameborder="0" allowfullscreen style="background-color:#ff7600"></iframe>
+                <iframe src="<?php the_field('video_url'); ?>" frameborder="0" allowfullscreen style="background-color:#ff7600"></iframe>
             </div>
         </div>
     </div>
@@ -428,8 +431,8 @@ get_header();
 <section class="l-c-news-events l-c-p-t-b-5">
     <div class="container">
 
-        <h2 class="text-center">News and Events</h2>
-        <p class="text-center para-main">Lorem ipsum dolor sit amet, consectetur</p>
+        <h2 class="text-center"><?php the_field('title_blog'); ?></h2>
+        <p class="text-center para-main"><?php the_field('sub_heading_blog'); ?></p>
 
         <div class="owl-carousel owl-theme" id="pd-n-e-slider">
 
@@ -502,8 +505,8 @@ get_header();
 
 <section class="l-c-contact-sec l-c-p-t-b-5" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
     <div class="container">
-        <h2>Get a Free Quotation</h2>
-        <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
+        <h2><?php the_field('title_contact'); ?></h2>
+        <p class="main-para"><?php the_field('sub_heading_contact'); ?></p>
 
         <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form home"]'); ?>
 
