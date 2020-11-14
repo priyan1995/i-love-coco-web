@@ -1373,3 +1373,18 @@ a.page-numbers:hover{
     text-decoration: none;
     background: #087a45;
 }
+
+.pd-blog-singel-inner .pd-main-image img{
+    box-shadow: -20px -20px #087a45;
+}
+
+.pd-blog-singel-inner{
+    position: relative;
+}
+
+.pd-blog-singel-inner .pd-blog-single-bottom{
+    position: absolute;
+    width: 250px;
+    bottom: 0;
+    right: 30px;
+}

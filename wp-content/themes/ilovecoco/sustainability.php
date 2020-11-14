@@ -90,7 +90,7 @@ get_header();
 
 
                                 <div class="pd-content-n-e">
-                                    <p>July 02, 2020 | <?php the_field('event_tag_fta'); ?></p>
+                                    <p><?php the_field('date_fta'); ?> | <?php the_field('event_tag_fta'); ?></p>
                                     <h4><?php the_title(); ?></h4>
                                     <div class="pd-desc" style="margin-bottom: 20px;"><?php the_content(); ?></div>
 
@@ -221,7 +221,7 @@ get_header();
 
                                 </div>
                                 <div class="pd-content-n-e">
-                                    <p>July 02, 2020 | <?php the_field('event_tag_csr'); ?></p>
+                                    <p><?php the_field('date_csr'); ?> | <?php the_field('event_tag_csr'); ?></p>
                                     <h4><?php the_title(); ?></h4>
                                     <div class="pd-desc" style="margin-bottom: 20px;"><?php the_content(); ?></div>
 

@@ -21,28 +21,78 @@ get_header();
         <div class="container">
             <div class="row pd-pad-t-b-10">
 
-                <div class="col-lg-6 pd-pad-bot-30">
-                    <div class="pd-n-e-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/n-e-post-1.png" class="pd-blog-img">
-                        <div class="pd-content-n-e">
-                            <p>July 02, 2020 | Lorem Ipsum</p>
-                            <h4>Healthy benifits of eating coconuts</h4>
-                            <p style="margin-bottom: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, expedita enim repellendus in facilis officia aut consectetur eos modi repellat ipsum voluptas recusandae, exercitationem cum error rerum esse doloribus sunt.</p>
-                            <div class="pd-flex">
-                                <a href="" class="hover-green">Read More</a>
-                                <div class="pd-links">
-                                    <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png"></a>
-                                    <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png"></a>
-                                    <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png"></a>
-                                   
+                <?php
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                $blog  = new WP_Query(array("post_type" => "blog", 'posts_per_page' => 4, 'paged' => $paged,));
+                if ($blog->have_posts()) :
+                    while ($blog->have_posts()) :
+                        $blog->the_post();
+
+                ?>
+
+                        <div class="col-lg-6 pd-pad-bot-30">
+                            <div class="pd-n-e-card">
+                                <img src="<?php the_field('image_blog'); ?>" class="pd-blog-img">
+                                <div class="pd-content-n-e">
+                                    <p><?php the_field('date_blog'); ?> | <?php the_field('tag_blog'); ?></p>
+                                    <h4><?php the_title(); ?></h4>
+                                    <p style="margin-bottom: 20px;"><?php the_field('short_description_blog'); ?></p>
+                                    <div class="pd-flex">
+                                        <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
+                                        <div class="pd-links">
+
+                                            <?php
+                                            $facebook = get_field('facebook_link_blog');
+                                            $twitter = get_field('twitter_link_blog');
+                                            $linkedin = get_field('linkedin_link_blog');
+                                            ?>
+
+                                            <?php if ($facebook) { ?>
+                                                <a href="<?php echo $facebook; ?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png"></a>
+                                            <?php } ?>
+                                            <?php if ($twitter) { ?>
+                                                <a href="<?php echo $twitter; ?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png"></a>
+                                            <?php } ?>
+                                            <?php if ($linkedin) { ?>
+                                                <a href="<?php echo $linkedin; ?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png"></a>
+                                            <?php } ?>
+
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                <?php
+                    endwhile;
+                endif; ?>
+
+                <div class="col-lg-12">
+                    <?php
+                    $total_pages = $blog->max_num_pages;
+
+                    if ($total_pages > 1) {
+
+                        $current_page = max(1, get_query_var('paged'));
+
+                        echo paginate_links(array(
+                            'base' => get_pagenum_link(1) . '%_%',
+                            'format' => '/page/%#%',
+                            'current' => $current_page,
+                            'total' => $total_pages,
+                            'prev_text'    => __('« prev'),
+                            'next_text'    => __('next »'),
+                        ));
+                    }
+
+                    wp_reset_query();
+                    ?>
                 </div>
 
-
             </div>
+
+        </div>
     </section>
 
 
