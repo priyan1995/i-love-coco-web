@@ -7,7 +7,7 @@ get_header();
 ?>
 <div class="pd-contact-wrapper">
     <section class="pd-contact-main-banner">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63371.815297074514!2d79.82118589335941!3d6.921837369631892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1604829672051!5m2!1sen!2slk" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="<?php the_field('map_url_contact'); ?>" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section>
 
 
@@ -16,23 +16,51 @@ get_header();
             <div class="pd-contact-inf-card">
                 <div class="row">
                     <div class="col-lg-5 pd-cont-card-left-img">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/contact-image.png);" class="w-100">
+                        <img src="<?php the_field('image_cont_left'); ?>" class="w-100">
                     </div>
                     <div class="col-lg-7 pd-cont-card-right-content">
-                        <h2 class="pd-common-h2">Get a Free Quotation</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id enim quod necessitatibus distinctio voluptas modi deleniti, ducimus hic libero culpa expedita quae, alias sit. Ut, nam? Hic ab dolore similique.</p>
-                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png" class="pd-cont-card-icons"></span>47, Lorem Ipsum, Doler.</p>
-                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png" class="pd-cont-card-icons"></span>info@gmail.com</p>
-                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png" class="pd-cont-card-icons"></span>+91 456 12347</p>
-                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/whatsap.png" class="pd-cont-card-icons"></span>+98 456 7891</p>
+                        <h2 class="pd-common-h2"><?php the_field('contact_form_title_cont'); ?></h2>
+                        <p><?php the_field('main_description_contact'); ?></p>
+                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/location-cont.png" class="pd-cont-card-icons"></span> <?php echo get_option('address'); ?></p>
+                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/message-cont.png" class="pd-cont-card-icons"></span><?php echo get_option('email'); ?></p>
+                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/fax-cont.png" class="pd-cont-card-icons"></span> <?php echo get_option('fax'); ?></p>
+                        <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/phone-cont.png" class="pd-cont-card-icons"></span><?php echo get_option('contact_number'); ?></p>
 
                         <div class="pd-footer-links pull-right">
-                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png"></a>
-                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png"></a>
-                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png"></a>
-                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/whatsap.png"></a>
-                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/insta.png"></a>
-                            <a href="" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/youtube.png"></a>
+                        <?php 
+                   
+                   $youtube = get_option('youtube_link'); 
+                   $linkeding = get_option('linkedin'); 
+                   $facebook = get_option('facebook_url'); 
+                   $twitter = get_option('twitter_url'); 
+                   $whatsap = get_option('whatsap_number'); 
+                   $insta = get_option('insta_url'); 
+                   
+                   ?>
+                   
+                   <?php if($linkeding){ ?>
+                   <a href="<?php echo $linkeding ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png"></a>
+                   <?php } ?>
+
+                   <?php if($facebook){ ?>
+                    <a href="<?php echo $facebook ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png"></a>
+                    <?php } ?>
+
+                    <?php if($twitter){ ?>
+                    <a href="<?php echo $twitter ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png"></a>
+                     <?php } ?>
+
+                    <?php if($whatsap){ ?>
+                    <a href="<?php echo $whatsap ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/whatsap.png"></a>
+                     <?php } ?>
+
+                    <?php if($insta){ ?>
+                    <a href="<?php echo $insta ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/insta.png"></a>
+                     <?php } ?>
+
+                    <?php if($youtube){ ?>
+                    <a href="<?php echo $youtube ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/youtube.png"></a>
+                     <?php } ?>
                         </div>
                     </div>
                 </div>
