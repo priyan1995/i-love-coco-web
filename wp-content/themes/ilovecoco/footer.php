@@ -27,7 +27,7 @@
                     ?>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 pd-pad-0">
                 <h4>Products</h4>
                 <div class="footer-menu-wrap">
                     <?php

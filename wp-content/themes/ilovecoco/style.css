@@ -1388,3 +1388,7 @@ a.page-numbers:hover{
     bottom: 0;
     right: 30px;
 }
+
+.pd-pad-0{
+    padding: 0;
+}
