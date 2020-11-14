@@ -75,6 +75,10 @@ textarea:focus{
     padding-bottom: 30px;
 }
 
+.pd-m-b-25{
+    margin-bottom: 25px;
+}
+
 button{
     outline: none !important;
 }
@@ -1265,6 +1269,18 @@ section.l-c-banner {
     background-repeat: no-repeat !important;
 }
 
+.pd-f-t-section .pd-n-e-card .pd-content-n-e .pd-desc{
+    max-height: 90px;
+    overflow: auto;
+}
+
+.pd-sustainability-section .pd-n-e-card .pd-content-n-e .pd-desc{
+    max-height: 90px;
+    overflow: auto;
+}
+
+
+
 /* product view page */
 
 .pd-featured-prod .pd-prod-card-home a{
@@ -1336,4 +1352,23 @@ section.l-c-banner {
 
 .m-b-20{
     margin-bottom: 20px;
+}
+
+a.page-numbers {
+    background: #b7b7b7;
+    color: white;
+    padding: 5px 10px;
+    text-transform: capitalize;
+}
+
+.page-numbers.current{
+    background: #087a45;
+    color: white;
+    padding: 5px 10px;
+    text-transform: capitalize;  
+}
+
+a.page-numbers:hover{
+    text-decoration: none;
+    background: #087a45;
 }
