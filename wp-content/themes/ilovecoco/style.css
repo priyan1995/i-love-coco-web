@@ -1453,6 +1453,57 @@ a.page-numbers:hover{
     .pd-pad-0{
         padding: 15px;
     }
+     /* mobile menu */
+
+     .pd-logo-col{
+        position: absolute;
+        top: 0;   
+    }
+    .pd-mob-nav-bar{
+        width: 100%;
+        max-width: 100%;
+        text-align: right;
+        float: right;
+        padding-top: 15px;
+        padding-bottom: 15px; 
+        flex: 0 0 100%;
+    }
+
+    .navbar-expand-lg{
+        text-align: right;
+        justify-content: flex-end;  
+    }
+
+    .navbar-dark .navbar-toggler{
+        background-color: #087a45cc;
+    border-radius: 0;
+    padding: 2px 10px;
+    }
+
+    .sticky #pd_fixed_nav{
+        padding: 5px 0;
+    }
+
+    .sticky .logo-wrap img{
+        padding-top: 30px;
+    }
+
+    .sticky  .pd-mob-nav-bar{
+        padding-bottom: 0;
+    }
+    ul.dropdown-menu{
+        text-align: center;
+    }
+    #navbarNavDropdown{
+        height: 100vh;
+        overflow: auto; 
+        padding-top: 10px;  
+    }
+    .navbar #main-menu .menu-item a{
+        margin-bottom: 5px;
+        font-size: 17px; 
+    }
+    
 }
 
 /* Small Devices, Tablets */
@@ -1515,6 +1566,15 @@ a.page-numbers:hover{
     .pd-ingred-tbl{
         margin-bottom: 20px;
     }
+    .l-c-abt-sec p,
+    .l-c-abt-sec h3,
+    .l-c-abt-sec h4{
+        text-align: center;
+    }
+
+
+   
+
 }
 
 /* Extra Small Devices, Phones */
@@ -1591,11 +1651,18 @@ a.page-numbers:hover{
 /* Custom, iPhone Retina */
 
 @media only screen and (max-width: 320px) {
-
+    #navbarNavDropdown{
+        height: 90vh;
+    }
 }
+
+
 
 /* Custom, iPhone landscape */
 
-@media only screen and (max-height: 450px) {
-
+@media only screen and (max-width:992px) and (max-height: 590px) {
+    #navbarNavDropdown{
+        height: 80vh !important;
+    }
 }
+

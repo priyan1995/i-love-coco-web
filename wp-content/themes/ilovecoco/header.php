@@ -47,7 +47,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-9 col-8 pd-mob-nav-bar pd-nav-col">
+            <div class="col-md-9 col-12 pd-mob-nav-bar pd-nav-col">
 
               <nav class="navbar navbar-expand-lg navbar-dark " id="pd_fixed_nav">
 
