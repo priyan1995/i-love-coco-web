@@ -12,7 +12,7 @@ get_header();
             </div>
         </div>
     </section>
-    <section class=" l-c-p-t-b-5">
+    <section class="pd-cert-inner-sec l-c-p-t-b-5">
         <div class="container">
             <div class="row pd-aligned-center">
                 <div class="col-lg-4">

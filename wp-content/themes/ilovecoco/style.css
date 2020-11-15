@@ -1386,7 +1386,9 @@ a.page-numbers:hover{
     position: absolute;
     width: 250px;
     bottom: 0;
-    right: 30px;
+    right: 0;
+    z-index: -1;
+    filter: opacity(0.5);
 }
 
 .pd-pad-0{
@@ -1423,4 +1425,177 @@ a.page-numbers:hover{
     font-size: 12px;
     font-weight: 400;
     font-family: 'Poppins';
+}
+
+/* =================================== media queries ========================================== */
+
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {
+    .pd-inner-banner {
+        height: 38vh ;
+        background-size: cover;
+    }
+    .pd-blog-section .pd-content-n-e .pd-flex a {
+        width: 32%;
+    }
+ 
+}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    .pd-footer-logo::after{
+        display: none;
+    }
+    .pd-pad-0{
+        padding: 15px;
+    }
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+
+    .pd-contact-inf-card{
+        margin-top: 0;
+    }
+
+    .pd-contact-card-sec .container{
+        padding: 20px;
+    }
+
+    .pd-contact-inf-card .pd-cont-card-right-content{
+        padding-left: 40px;
+    }
+    .p-l-2 {
+        padding-left: 15px;
+    }
+    .p-r-2 {
+        padding-right: 15px;
+    }
+    
+    .pd-inner-banner{
+        height: 30vh;
+    }
+    .pd-blog-section .pd-content-n-e .pd-flex a {
+        width: 20%;
+    }
+    .pd-content-n-e .pd-flex {
+        display: inline-block;
+    }
+
+    .pd-vision-misison-sec .pd-direct-message-card .col-lg-4 img{
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 40px;
+    }
+    .pd-vision-misison-sec .pd-direct-message-card{
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .pd-we-different-sec .row:nth-child(even){
+        flex-direction: column-reverse;
+    }
+    .pd-we-different-sec .owl-carousel {
+        margin-bottom: 20px;
+    }
+    .pd-cert-inner-sec{
+        text-align: center;
+    }
+    .pd-cert-inner-sec img{
+        margin-bottom: 20px;
+    }
+    .page-template-about .l-c-certificate-sec .pd-cert-card{
+        background-color: white;
+    }
+    .pd-ingred-tbl{
+        margin-bottom: 20px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px)  {
+    .pd-contact-inf-card .pd-cont-card-right-content {
+        padding: 30px 20px 30px 30px !important;
+    } 
+    .pd-inner-banner{
+        height: 20vh;
+    }
+    .pd-inner-banner .pd-breadcrumb h3{
+        font-size: 27px;
+        padding-top: 20px; 
+    }
+    .pd-pad-t-b-10{
+        padding: 0;
+    }
+    .pd-blog-section .pd-content-n-e .pd-flex a {
+        width: 33%;
+    }
+    .pd-blog-singel-inner .pd-main-image img{
+        width: 100%;
+    }
+    #category-menu li{
+        flex: 0 0 33%;
+        max-width: 32%;
+    }
+ 
+
+}
+/* phone landscape */
+@media only screen and (max-width: 768px) and (orientation:landscape){
+    .pd-inner-banner {
+        height: 55vh;
+    }
+    }
+
+/* landscape  iphone x*/
+@media only screen and (max-width: 850px) and (min-width : 800px) and (orientation:landscape) {
+    .p-l-2 {
+        padding-left: 15px;
+    }
+    .p-r-2 {
+        padding-right: 15px;
+    }
+    .pd-contact-inf-card .pd-cont-card-right-content {
+        padding: 30px 20px 30px 30px !important;
+    }
+    .pd-inner-banner {
+        height: 65vh;
+    }
+    
+    .pd-vision-misison-sec .pd-direct-message-card .col-lg-4 img{
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 40px;
+    }
+    .pd-vision-misison-sec .pd-direct-message-card{
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .pd-we-different-sec .row:nth-child(even){
+        flex-direction: column-reverse;
+    }
+    .pd-we-different-sec .owl-carousel {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {
+
+}
+
+/* Custom, iPhone landscape */
+
+@media only screen and (max-height: 450px) {
+
 }
