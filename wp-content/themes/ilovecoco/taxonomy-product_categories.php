@@ -79,44 +79,27 @@ $term = get_queried_object();
             <p>Lorem ipsum dolor sit amet, consectetur</p>
 
             <div class="owl-carousel owl-theme" id="pd-cert-slider">
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green">Read More</a>
-                    </div>
-                </div>
+                <?php
+                $certificates  = new WP_Query(array("post_type" => "certifications", "order" => "DESC"));
+                if ($certificates->have_posts()) :
+                    while ($certificates->have_posts()) :
+                        $certificates->the_post();
 
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-3.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green">Read More</a>
-                    </div>
-                </div>
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-2.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green">Read More</a>
-                    </div>
-                </div>
+                ?>
+                        <div class="item text-center">
+                            <div class="pd-cert-card">
+                                <img src="<?php the_field('image_cert'); ?>">
+                                <h4><?php the_title(); ?></h4>
+                                <p><?php the_field('short_description_cert'); ?></p>
+                                <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
+                            </div>
+                        </div>
+                <?php
+                    endwhile;
+                endif;
+                wp_reset_query();
+                ?>
 
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green"> Read More</a>
-                    </div>
-                </div>
             </div>
 
 

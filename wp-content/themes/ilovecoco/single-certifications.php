@@ -15,10 +15,11 @@ get_header();
     <section class="pd-cert-inner-sec l-c-p-t-b-5">
         <div class="container">
             <div class="row pd-aligned-center">
-                <div class="col-lg-4">
-                <img src="<?php the_field('image_cert'); ?>" >
+                <div class="col-lg-12 text-center" style="margin-bottom: 20px;">
+                    <img src="<?php the_field('image_cert'); ?>">
                 </div>
-                <div class="col-lg-8">
+                <br>
+                <div class="col-lg-12 text-center">
                     <h2><?php the_title(); ?></h2>
                     <p><?php the_content(); ?></p>
                 </div>
