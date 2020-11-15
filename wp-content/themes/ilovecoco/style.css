@@ -1401,3 +1401,7 @@ a.page-numbers:hover{
     border-radius: 0;
     border: 0;   
 }
+
+.pd-imp-inf h6{
+    color: #087a45;
+}

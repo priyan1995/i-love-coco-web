@@ -9,19 +9,29 @@
 
                     <div class="owl-carousel owl-theme" id="pd-product-slider-inner">
 
-                    <?php 
-                        
-                    ?>
+                        <?php
+                        $image1 = get_field('slider_image_1_prod');
+                        $image2 = get_field('slider_image_2_prod');
+                        $image3 = get_field('slider_image_3_prod');
+                        ?>
 
-                        <div class="item">
-                            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/abt-slider-1.png">
-                        </div>
-                        <div class="item">
-                            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/abt-slider-1.png">
-                        </div>
-                        <div class="item">
-                            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/abt-slider-1.png">
-                        </div>
+                        <?php if ($image1) { ?>
+                            <div class="item">
+                                <img src="<?php echo $image1; ?>">
+                            </div>
+                        <?php } ?>
+
+                        <?php if ($image2) { ?>
+                            <div class="item">
+                                <img src="<?php echo  $image2; ?>">
+                            </div>
+                        <?php } ?>
+
+                        <?php if ($image3) { ?>
+                            <div class="item">
+                                <img src="<?php echo $image3; ?>">
+                            </div>
+                        <?php } ?>
 
 
                     </div>
@@ -33,10 +43,16 @@
 
                 </div>
 
-                <div class="col-lg-12" style="margin-top: 20px;">
-                    <h5>Pakaging Type</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum itaque amet tempore quos repellendus, alias nemo. Optio ipsum id inventore deserunt ea. Cupiditate distinctio, mollitia tempore doloremque minima magni magnam!</p>
-                </div>
+                <?php
+                $pakaging_type = get_field('pakaging_type');
+                if ($pakaging_type) {
+                ?>
+
+                    <div class="col-lg-12" style="margin-top: 20px;">
+                        <h5>Pakaging Type</h5>
+                        <p><?php echo $pakaging_type; ?></p>
+                    </div>
+                <?php } ?>
             </div>
 
             <br>
@@ -60,21 +76,29 @@
                     </table>
                 </div>
                 <div class="col-lg-5">
-                    <h4>Certifications available :</h4>
-                    <p>GMP, HACCP, ISO 22000, BRC (Grade - AA), IFS (Score - 92.74%), Organic (EU, NOP-USDA, JAS, Naturland), Halal, Kosher, BSCI, Fairtrade, Fair TSA</p>
 
-                    <h4>Important information :</h4>
+                    <?php
+                    $certifications = get_field('certifications');
+                    if ($certifications) {
+                    ?>
+                        <h4>Certifications available :</h4>
+                        <p>GMP, HACCP, ISO 22000, BRC (Grade - AA), IFS (Score - 92.74%), Organic (EU, NOP-USDA, JAS, Naturland), Halal, Kosher, BSCI, Fairtrade, Fair TSA</p>
 
-                    <h5>Shelf life</h5>
-                    <p>Maximum 24 months (if store under ambient temperature)</p>
+                    <?php } else {
+                        echo '<p> No certifications to show. </p>';
+                    } ?>
 
-                    <h5>Storage</h5>
-                    <p>Cool and dry place at ambient temperature
-                        (25-28 o C), away from direct sunlight</p>
 
-                    <h5>Intended use</h5>
-                    <p> Use in cooking, deep frying process, cosmetic,
-                        salads etc.</p>
+                    <?php
+                    $information = get_field('important_information');
+                    if ($information) {
+                    ?>
+                        <div class="pd-imp-inf">
+                            <h4>Important information :</h4>
+                            <?php echo $information; ?>
+                        </div>
+                    <?php } ?>
+
 
                     <img src="<?php echo bloginfo('template_url'); ?>/assets/img/coconut-pieces.png">
 
@@ -148,44 +172,30 @@
             <p>Lorem ipsum dolor sit amet, consectetur</p>
 
             <div class="owl-carousel owl-theme" id="pd-cert-slider">
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green">Read More</a>
-                    </div>
-                </div>
 
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-3.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green">Read More</a>
-                    </div>
-                </div>
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-2.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green">Read More</a>
-                    </div>
-                </div>
+                <?php
+                $certificates  = new WP_Query(array("post_type" => "certifications", "order" => "DESC"));
+                if ($certificates->have_posts()) :
+                    while ($certificates->have_posts()) :
+                        $certificates->the_post();
 
-                <div class="item text-center">
-                    <div class="pd-cert-card">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/cert-1.png">
-                        <h4>Japanese organic <br>
-                            Certification</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                        <a href="" class="hover-green"> Read More</a>
-                    </div>
-                </div>
+                ?>
+
+                        <div class="item text-center">
+                            <div class="pd-cert-card">
+                                <img src="<?php the_field('image_cert'); ?>">
+                                <h4><?php the_title(); ?></h4>
+                                <p><?php the_field('short_description_cert'); ?></p>
+                                <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
+                            </div>
+                        </div>
+
+                <?php
+                    endwhile;
+                endif;
+                wp_reset_query();
+                ?>
+
             </div>
 
 
