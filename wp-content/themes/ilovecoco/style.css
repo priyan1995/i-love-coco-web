@@ -1405,3 +1405,22 @@ a.page-numbers:hover{
 .pd-imp-inf h6{
     color: #087a45;
 }
+
+.pd-ingred-tbl thead th{
+    background: #087a45;
+    padding: 10px 18px;
+    border: 2px solid white;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Roboto Slab';
+}
+.pd-ingred-tbl tbody td{
+    background: #f4f4f5;
+    padding: 10px 18px;
+    border: 2px solid white;
+    color: rgb(124, 124, 124);
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Poppins';
+}
