@@ -8,6 +8,11 @@
                 <div class="col-lg-6">
 
                     <div class="owl-carousel owl-theme" id="pd-product-slider-inner">
+
+                    <?php 
+                        
+                    ?>
+
                         <div class="item">
                             <img src="<?php echo bloginfo('template_url'); ?>/assets/img/abt-slider-1.png">
                         </div>
@@ -17,13 +22,14 @@
                         <div class="item">
                             <img src="<?php echo bloginfo('template_url'); ?>/assets/img/abt-slider-1.png">
                         </div>
+
+
                     </div>
 
                 </div>
                 <div class="col-lg-6">
                     <h2><?php the_title(); ?></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos odio iure ipsa molestias minima eaque, corrupti tempore. Consequatur accusamus sequi ex, dolor nisi at corrupti eligendi ipsa sed. Ut.Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos odio iure ipsa molestias minima eaque, corrupti tempore. Consequatur accusamus sequi ex, dolor nisi at corrupti eligendi ipsa sed. Ut.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos odio iure ipsa molestias minima eaque, corrupti tempore. Consequatur accusamus sequi ex, dolor nisi at corrupti eligendi ipsa sed. Ut.</p>
+                    <?php the_content(); ?>
 
                 </div>
 
@@ -33,11 +39,53 @@
                 </div>
             </div>
 
+            <br>
+
+
+            <div class="row">
+                <div class="col-lg-7">
+                    <table class="w-100">
+                        <thead>
+                            <tr>
+                                <th>Average Quantitiy</th>
+                                <th>Per 100g</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-5">
+                    <h4>Certifications available :</h4>
+                    <p>GMP, HACCP, ISO 22000, BRC (Grade - AA), IFS (Score - 92.74%), Organic (EU, NOP-USDA, JAS, Naturland), Halal, Kosher, BSCI, Fairtrade, Fair TSA</p>
+
+                    <h4>Important information :</h4>
+
+                    <h5>Shelf life</h5>
+                    <p>Maximum 24 months (if store under ambient temperature)</p>
+
+                    <h5>Storage</h5>
+                    <p>Cool and dry place at ambient temperature
+                        (25-28 o C), away from direct sunlight</p>
+
+                    <h5>Intended use</h5>
+                    <p> Use in cooking, deep frying process, cosmetic,
+                        salads etc.</p>
+
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/coconut-pieces.png">
+
+                </div>
+            </div>
+
 
         </div>
     </section>
 
-    <section class="pd-featured-prod l-c-p-t-b-5" >
+    <section class="pd-featured-prod l-c-p-t-b-5">
         <div class="container">
 
             <div class="owl-carousel owl-theme" id="pd-product-slider-inner-featured">

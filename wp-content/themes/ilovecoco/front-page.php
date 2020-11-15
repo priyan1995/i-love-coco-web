@@ -437,21 +437,21 @@ get_header();
         <div class="owl-carousel owl-theme" id="pd-n-e-slider">
 
             <?php
-
-
-            for ($x = 0; $x <= 5; $x++) {
+            $blog_home  = new WP_Query(array("post_type" => "blog", "order" => "DESC"));
+            if ($blog_home->have_posts()) :
+                while ($blog_home->have_posts()) :
+                    $blog_home->the_post();
 
             ?>
 
 
-                <div class="item">
+                    <div class="item">
 
-                    <div class="row">
-
-                        <div class="col-lg-6 pad-r-0">
+                        <!-- <div class="col-lg-6 pad-r-0">
                             <div class="pd-cert-card">
                                 <div class="pd-img-top">
-                                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/n-e-post-1.png">
+                                    <img src="<?php //echo bloginfo('template_url'); 
+                                                ?>/assets/img/n-e-post-1.png">
                                 </div>
                                 <div class="pd-content-card">
                                     <h4>Japanese organic Certification</h4>
@@ -459,42 +459,34 @@ get_header();
                                     <a href="" class="hover-green">Read More</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="col-lg-3 pad-0">
+                        <div class="pad-0">
                             <div class="pd-cert-card">
                                 <div class="pd-img-top">
-                                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/n-e-post-1.png">
-                                    <h4 class="pd-positioned-heading-card">Japanese organic Certification</h4>
+                                    <img src="<?php the_field('image_blog'); ?>">
+                                    <h4 class="pd-positioned-heading-card"><?php the_title(); ?></h4>
                                 </div>
                                 <div class="pd-content-card">
 
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                                    <a href="" class="hover-green">Read More</a>
+                                    <p><?php the_field('short_description_blog'); ?></p>
+                                    <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-3 pad-0">
-                            <div class="pd-cert-card">
-                                <div class="pd-img-top">
-                                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/n-e-post-1.png">
-                                    <h4 class="pd-positioned-heading-card">Japanese organic Certification</h4>
-                                </div>
-                                <div class="pd-content-card">
-
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ducimus itaque voluptatum.</p>
-                                    <a href="" class="hover-green">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
 
-                </div>
+                    
 
 
-            <?php } ?>
+
+
+            <?php
+                endwhile;
+            endif;
+            wp_reset_query();
+            ?>
+
 
 
         </div>

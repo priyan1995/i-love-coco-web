@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php 
+get_header(); 
+?>
 
 <section class="pd-about-banner-main pd-inner-banner" style="background-image:url('<?php echo bloginfo('template_url'); ?>/assets/img/abt-banner.png')">
     <div class="container">

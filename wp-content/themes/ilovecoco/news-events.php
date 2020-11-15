@@ -36,7 +36,7 @@ get_header();
                                 <div class="pd-content-n-e">
                                     <p><?php the_field('date_blog'); ?> | <?php the_field('tag_blog'); ?></p>
                                     <h4><?php the_title(); ?></h4>
-                                    <p style="margin-bottom: 20px;"><?php the_field('short_description_blog'); ?></p>
+                                    <p style="margin-bottom: 20px;" class="pd-min-height"><?php the_field('short_description_blog'); ?></p>
                                     <div class="pd-flex">
                                         <a href="<?php the_permalink(); ?>" class="hover-green">Read More</a>
                                         <div class="pd-links">

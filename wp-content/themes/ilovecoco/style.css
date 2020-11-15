@@ -1392,3 +1392,12 @@ a.page-numbers:hover{
 .pd-pad-0{
     padding: 0;
 }
+
+.pd-min-height{
+    min-height: 65px;
+}
+
+#main-menu .dropdown-menu{
+    border-radius: 0;
+    border: 0;   
+}
