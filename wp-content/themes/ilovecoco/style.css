@@ -331,6 +331,7 @@ section.l-c-banner {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .l-c-contact-sec h2{
@@ -375,6 +376,12 @@ section.l-c-banner {
     font-size: 12px;
     color: white;
     height: 47px;
+    transition: 0.5s;
+}
+
+.l-c-contact-sec #pd-cont-submit-home:hover{
+    transition: 0.5s;
+    background: #087a45;
 }
 
 .l-c-contact-sec #pd-cont-home-radio-btns .wpcf7-list-item{
@@ -406,12 +413,51 @@ section.l-c-banner {
 
 .l-c-footer{
     background:#056240;
+    /* background-size: 400% 400%;
+    transition: 0.5s;
+    animation: animate_footer 15s ease infinite;
+    background: linear-gradient(45deg, #056240, #002f1e); */
 }
 
+/* @keyframes animate_footer{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 0 100%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+} */
+
+
+
+
+
 .pd-bottom-bar{
-    background: #333533;
+    /* background: #333533; */
     text-align: center;
+    background: linear-gradient(20deg, #333533, #151515, #4e4e4e);
+    transition: 0.5s;
+    background-size: 400% 400%;
+    animation: bottom_bar_animation 20s ease infinite;
 }
+
+@keyframes bottom_bar_animation {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+
 
 .pd-bottom-bar p{
     margin: 0;
@@ -482,6 +528,12 @@ section.l-c-banner {
 /* news event */
 #pd-n-e-slider .pd-cert-card{
     padding: 10px;
+    transition: 0.5s;
+}
+
+#pd-n-e-slider .pd-cert-card:hover{
+    transition: 0.5s;
+    transform: translateY(-2px);
 }
 
 .pad-r-0{
@@ -491,10 +543,13 @@ section.l-c-banner {
 #pd-n-e-slider .pd-img-top img{
     height: 250px;
     object-fit: cover;
+    transition: 0.5s;
 }
 
 #pd-n-e-slider .pd-img-top{
     position: relative;
+    transition: 0.5s;
+    overflow: hidden;
 }
 
 #pd-n-e-slider .pd-img-top::after{
@@ -504,6 +559,12 @@ section.l-c-banner {
     height: 100%;
     top: 0;
     background: linear-gradient(to bottom, #00000085, transparent);
+}
+
+#pd-n-e-slider .pd-img-top:hover img{ 
+    filter: brightness(0.7);
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 #pd-n-e-slider .pd-content-card h4{
@@ -762,7 +823,7 @@ section.l-c-banner {
 .pd-prod-card-home:hover{
     transition: 0.5s;
     transform: translateY(-2px);
-    box-shadow: 0px 6px 14px -9px #0000006e;
+    box-shadow: 0px 12px 19px -14px #0000006e;
 }
 
 .pd-prod-card-home img{ 
@@ -927,7 +988,16 @@ section.l-c-banner {
     top: -92px;
     left: -50px;
     box-shadow: 0px 17px 26px -28px black;
+    transition: 0.5s;
 }
+
+.pd-vision-misison-sec .pd-direct-message-card .col-lg-4 img:hover{
+    transition: 0.5s;
+    filter: brightness(0.8);
+    transform: translateY(-5px);
+    box-shadow: 0px 30px 24px -19px #0000005e;
+}
+
 
 .pd-vision-misison-sec .pd-direct-message-card h5{
     color: rgb(51, 53, 51);
@@ -1080,6 +1150,13 @@ section.l-c-banner {
     margin-top: -195px;
     background: white;
     position: relative;
+    transition: 0.5s;
+}
+
+.pd-contact-inf-card:hover{
+    transition: 0.5s;
+    transform: translateY(-5px);
+    box-shadow: 0px 41px 73px -53px #00000069;
 }
 
 .pd-contact-inf-card::after{
@@ -1138,7 +1215,7 @@ section.l-c-banner {
 }
 
 .pd-blog-section .pd-content-n-e .pd-flex a{
-    width: 25%;
+    width: auto;
 }
 .pd-blog-section .pd-content-n-e .pd-links {
     width: 75%;
@@ -1426,6 +1503,137 @@ a.page-numbers:hover{
     font-weight: 400;
     font-family: 'Poppins';
 }
+
+/* ================== transition =================== */
+
+
+#pd-cert-slider .owl-next,
+#pd-cert-slider .owl-prev,
+#pd-abt-slider-3 .owl-next,
+#pd-abt-slider-3 .owl-prev,
+#pd-abt-slider-2 .owl-next,
+#pd-abt-slider-2 .owl-prev,
+#pd-abt-slider-1 .owl-next,
+#pd-abt-slider-1 .owl-prev,
+#pd-abt-slider-4 .owl-next,
+#pd-abt-slider-4 .owl-prev,
+#pd-abt-main-slider .owl-next,
+#pd-abt-main-slider .owl-prev,
+#pd-n-e-slider .owl-next,
+#pd-n-e-slider .owl-prev,
+#pd-product-slider-inner .owl-prev,
+#pd-product-slider-inner .owl-next{
+    transition: 0.5s;
+}
+
+#pd-cert-slider .owl-next:hover,
+#pd-cert-slider .owl-prev:hover,
+#pd-abt-slider-3 .owl-next:hover,
+#pd-abt-slider-3 .owl-prev:hover,
+#pd-abt-slider-2 .owl-next:hover,
+#pd-abt-slider-2 .owl-prev:hover,
+#pd-abt-slider-1 .owl-next:hover,
+#pd-abt-slider-1 .owl-prev:hover,
+#pd-abt-slider-4 .owl-next:hover,
+#pd-abt-slider-4 .owl-prev:hover,
+#pd-abt-main-slider .owl-next:hover,
+#pd-abt-main-slider .owl-prev:hover,
+#pd-n-e-slider .owl-next:hover,
+#pd-n-e-slider .owl-prev:hover,
+#pd-product-slider-inner .owl-next:hover,
+#pd-product-slider-inner .owl-prev:hover{
+    transition: 0.5s;
+    transform: translateY(-2px);
+    background: #087a45 !important;
+}
+
+.pd-overf-hidden{
+    overflow: hidden;
+}
+
+.pd-cont-card-left-img .pd-overf-hidden img{
+    transition: 0.5s;
+}
+
+.pd-cont-card-left-img .pd-overf-hidden img:hover{
+    transition: 0.5s;
+    filter: brightness(0.7);
+    transform: scale(1.05);
+}
+
+.pd-footer-links a img{
+    transition: 0.5s;
+}
+
+.pd-footer-links a img:hover{
+    transition: 0.5s;
+    transform: translateY(-2px);
+}
+
+.pd-we-different-sec .owl-carousel img{
+    transition: 0.5s;
+}
+
+.pd-we-different-sec .owl-carousel img:hover{
+    transition: 0.5s;
+    filter: brightness(0.8);
+    transform: scale(1.06);
+}
+
+.page-template-news-events .pd-blog-section .pd-n-e-card img{
+    transition: 0.5s;
+}
+
+.page-template-news-events .pd-blog-section .pd-n-e-card img:hover{
+    transition: 0.5s;
+    filter: brightness(0.7);
+    transform: scale(1.07);
+}
+
+.page-template-news-events .pd-blog-section .pd-n-e-card{
+    transition: 0.5s;
+}
+
+.page-template-news-events .pd-blog-section .pd-n-e-card:hover{
+    transition: 0.5s;
+    box-shadow: 0px 0px black;
+    transform: translateY(-5px);
+}
+
+.pd-blog-singel-inner .pd-main-image img{
+    transition: 0.5s;
+}
+
+.pd-blog-singel-inner .pd-main-image img:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 black;
+    filter: brightness(0.8);
+    transform: translateY(-8px);
+}
+
+.page-template-sustainability .owl-carousel,
+.page-template-sustainability .owl-carousel img,
+#pd-product-slider-inner img{
+    transition: 0.5s;
+}
+.page-template-sustainability .owl-carousel:hover img{
+    transition: 0.5s;
+    filter: brightness(0.7);
+    transform: scale(1.02);
+}
+
+.page-template-sustainability .pd-n-e-card{
+    transition: 0.5s;
+}
+
+#pd-product-slider-inner img:hover{
+    transition: 0.5s;
+    filter: brightness(0.7);
+    transform: scale(1.07);
+}
+
+
+
 
 /* =================================== media queries ========================================== */
 

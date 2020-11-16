@@ -16,7 +16,9 @@ get_header();
             <div class="pd-contact-inf-card">
                 <div class="row">
                     <div class="col-lg-5 pd-cont-card-left-img">
-                        <img src="<?php the_field('image_cont_left'); ?>" class="w-100">
+                        <div class="pd-overf-hidden">
+                            <img src="<?php the_field('image_cont_left'); ?>" class="w-100">
+                        </div>
                     </div>
                     <div class="col-lg-7 pd-cont-card-right-content">
                         <h2 class="pd-common-h2"><?php the_field('contact_form_title_cont'); ?></h2>
@@ -27,40 +29,40 @@ get_header();
                         <p><span><img src="<?php echo bloginfo('template_url'); ?>/assets/img/phone-cont.png" class="pd-cont-card-icons"></span><?php echo get_option('contact_number'); ?></p>
 
                         <div class="pd-footer-links pull-right">
-                        <?php 
-                   
-                   $youtube = get_option('youtube_link'); 
-                   $linkeding = get_option('linkedin'); 
-                   $facebook = get_option('facebook_url'); 
-                   $twitter = get_option('twitter_url'); 
-                   $whatsap = get_option('whatsap_number'); 
-                   $insta = get_option('insta_url'); 
-                   
-                   ?>
-                   
-                   <?php if($linkeding){ ?>
-                   <a href="<?php echo $linkeding ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png"></a>
-                   <?php } ?>
+                            <?php
 
-                   <?php if($facebook){ ?>
-                    <a href="<?php echo $facebook ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png"></a>
-                    <?php } ?>
+                            $youtube = get_option('youtube_link');
+                            $linkeding = get_option('linkedin');
+                            $facebook = get_option('facebook_url');
+                            $twitter = get_option('twitter_url');
+                            $whatsap = get_option('whatsap_number');
+                            $insta = get_option('insta_url');
 
-                    <?php if($twitter){ ?>
-                    <a href="<?php echo $twitter ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png"></a>
-                     <?php } ?>
+                            ?>
 
-                    <?php if($whatsap){ ?>
-                    <a href="<?php echo $whatsap ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/whatsap.png"></a>
-                     <?php } ?>
+                            <?php if ($linkeding) { ?>
+                                <a href="<?php echo $linkeding; ?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/linkedin.png"></a>
+                            <?php } ?>
 
-                    <?php if($insta){ ?>
-                    <a href="<?php echo $insta ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/insta.png"></a>
-                     <?php } ?>
+                            <?php if ($facebook) { ?>
+                                <a href="<?php echo $facebook; ?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/facebook.png"></a>
+                            <?php } ?>
 
-                    <?php if($youtube){ ?>
-                    <a href="<?php echo $youtube ;?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/youtube.png"></a>
-                     <?php } ?>
+                            <?php if ($twitter) { ?>
+                                <a href="<?php echo $twitter; ?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/twitter.png"></a>
+                            <?php } ?>
+
+                            <?php if ($whatsap) { ?>
+                                <a href="<?php echo $whatsap; ?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/whatsap.png"></a>
+                            <?php } ?>
+
+                            <?php if ($insta) { ?>
+                                <a href="<?php echo $insta; ?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/insta.png"></a>
+                            <?php } ?>
+
+                            <?php if ($youtube) { ?>
+                                <a href="<?php echo $youtube; ?>" target="_blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/img/youtube.png"></a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

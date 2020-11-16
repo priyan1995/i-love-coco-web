@@ -32,7 +32,9 @@ get_header();
 
                         <div class="col-lg-6 pd-pad-bot-30">
                             <div class="pd-n-e-card">
-                                <img src="<?php the_field('image_blog'); ?>" class="pd-blog-img">
+                                <div class="pd-overf-hidden">
+                                    <img src="<?php the_field('image_blog'); ?>" class="pd-blog-img">
+                                </div>
                                 <div class="pd-content-n-e">
                                     <p><?php the_field('date_blog'); ?> | <?php the_field('tag_blog'); ?></p>
                                     <h4><?php the_title(); ?></h4>
