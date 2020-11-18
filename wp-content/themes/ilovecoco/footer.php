@@ -101,4 +101,10 @@
 </section>
 
 
+<script>
+  AOS.init({
+      once:true
+  });
+</script>
+
 <?php wp_footer() ?>

@@ -32,6 +32,10 @@ textdomain: ilovecoco
     text-align: left;
 }
 
+.pd-overf-hidden{
+    overflow: hidden;
+}
+
 .l-c-p-t-b-3{
     padding: 3% 0;
 }
