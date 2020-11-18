@@ -11,8 +11,8 @@ get_header();
     <section class="pd-about-banner-main pd-inner-banner" style="background-image:url('<?php echo bloginfo('template_url'); ?>/assets/img/abt-banner.png')">
         <div class="container">
             <div class="pd-breadcrumb text-center">
-                <h3>Blog</h3>
-                <a href="">Home / </a><span>Blog</span>
+                <h3 data-aos="fade-up" data-aos-duration="500">Blog</h3>
+                <a href="<?php echo site_url(); ?>" data-aos="fade-up" data-aos-duration="800">Home / </a><span data-aos="fade-up" data-aos-duration="800">Blog</span>
             </div>
         </div>
     </section>
@@ -22,6 +22,7 @@ get_header();
             <div class="row pd-pad-t-b-10">
 
                 <?php
+                $x = 500;
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $blog  = new WP_Query(array("post_type" => "blog", 'posts_per_page' => 4, 'paged' => $paged,));
                 if ($blog->have_posts()) :
@@ -30,7 +31,7 @@ get_header();
 
                 ?>
 
-                        <div class="col-lg-6 pd-pad-bot-30">
+                        <div class="col-lg-6 pd-pad-bot-30"  data-aos="fade-up" data-aos-duration="<?php echo $x; ?>">
                             <div class="pd-n-e-card">
                                 <div class="pd-overf-hidden">
                                     <img src="<?php the_field('image_blog'); ?>" class="pd-blog-img">
@@ -67,6 +68,7 @@ get_header();
                         </div>
 
                 <?php
+                 $x++;
                     endwhile;
                 endif; ?>
 
