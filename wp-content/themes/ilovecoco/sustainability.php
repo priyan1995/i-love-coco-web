@@ -11,8 +11,8 @@ get_header();
     <section class="pd-about-banner-main pd-inner-banner" style="background-image:url('<?php echo bloginfo('template_url'); ?>/assets/img/abt-banner.png')">
         <div class="container">
             <div class="pd-breadcrumb text-center">
-                <h3>Sustainability</h3>
-                <a href="">Home / </a><span>Sustainability</span>
+                <h3 data-aos="fade-up" data-aos-duration="500">Sustainability</h3>
+                <a href="<?php echo site_url(); ?>" data-aos="fade-up" data-aos-duration="800">Home / </a><span data-aos="fade-up" data-aos-duration="800">Sustainability</span>
             </div>
         </div>
     </section>
@@ -21,13 +21,14 @@ get_header();
     <section class="pd-sustainability-section  l-c-p-t-b-5">
         <div class="container">
 
-            <h2><?php the_field('main_title_01_csr'); ?></h2>
-            <p class="main-para"><?php the_field('sub_title_csr_1'); ?></p>
-            <p class="text-center pd-pad-bot-30"><?php the_field('main_description_01_csr'); ?></p>
+            <h2 data-aos="fade-up" data-aos-duration="500"><?php the_field('main_title_01_csr'); ?></h2>
+            <p class="main-para" data-aos="fade-up" data-aos-duration="800"><?php the_field('sub_title_csr_1'); ?></p>
+            <p class="text-center pd-pad-bot-30" data-aos="fade-up" data-aos-duration="1500"><?php the_field('main_description_01_csr'); ?></p>
 
 
             <div class="row">
                 <?php
+                $y = 500;
                 $x = 0;
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $FTA  = new WP_Query(array("post_type" => "fair_trade_activity", 'posts_per_page' => 2, 'paged' => $paged,));
@@ -38,7 +39,7 @@ get_header();
                 ?>
 
 
-                        <div class="col-lg-6 pd-pad-bot-30 pd-m-b-25">
+                        <div class="col-lg-6 pd-pad-bot-30 pd-m-b-25" data-aos="fade-up" data-aos-duration="<?php echo $y; ?>">
                             <div class="pd-n-e-card">
 
                                 <div class="owl-carousel owl-theme" id="pd-fair-trade-slider<?php echo $x; ?>">
@@ -156,13 +157,14 @@ get_header();
     <section class="pd-f-t-section  l-c-p-t-b-5">
         <div class="container">
 
-            <h2><?php the_field('main_title_02_csr'); ?></h2>
-            <p class="main-para"><?php the_field('sub_title_csr_2'); ?></p>
-            <p class="text-center pd-pad-bot-30"><?php the_field('main_description_02_csr'); ?></p>
+            <h2 data-aos="fade-up" data-aos-duration="500"><?php the_field('main_title_02_csr'); ?></h2>
+            <p class="main-para" data-aos="fade-up" data-aos-duration="800"><?php the_field('sub_title_csr_2'); ?></p>
+            <p class="text-center pd-pad-bot-30" data-aos="fade-up" data-aos-duration="1500"><?php the_field('main_description_02_csr'); ?></p>
 
 
             <div class="row">
                 <?php
+                $z = 500;
                 $y = 0;
                 $paged2 = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $csr  = new WP_Query(array("post_type" => "csr", 'posts_per_page' => 2, 'paged' => $paged2,));
@@ -173,7 +175,7 @@ get_header();
                 ?>
 
 
-                        <div class="col-lg-6 pd-pad-bot-30 pd-m-b-25">
+                        <div class="col-lg-6 pd-pad-bot-30 pd-m-b-25" data-aos="fade-up" data-aos-duration="<?php echo $z; ?>">
                             <div class="pd-n-e-card">
                                 <div class="owl-carousel owl-theme" id="pd-csr-slider<?php echo $y; ?>">
 
@@ -289,10 +291,10 @@ get_header();
 
     <section class="l-c-contact-sec l-c-p-t-b-5" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
         <div class="container">
-            <h2><?php the_field('contact_form_title_csr'); ?></h2>
-            <p class="main-para"><?php the_field('contact_from_subtitle_csr'); ?></p>
+            <h2 data-aos="fade-up" data-aos-duration="500"><?php the_field('contact_form_title_csr'); ?></h2>
+            <p class="main-para" data-aos="fade-up" data-aos-duration="800"><?php the_field('contact_from_subtitle_csr'); ?></p>
 
-            <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form home"]'); ?>
+            <div data-aos="fade-up" data-aos-duration="1500"><?php echo do_shortcode('[contact-form-7 id="5" title="Contact form home"]'); ?></div>
 
         </div>
     </section>
