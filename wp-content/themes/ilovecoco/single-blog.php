@@ -14,17 +14,17 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-lg-6 pd-main-image">
-                <img src="<?php the_field('image_blog'); ?>">
+                <img src="<?php the_field('image_blog'); ?>" data-aos="fade-up" data-aos-duration="500">
             </div>
             <div class="col-lg-6">
-                <h3><?php the_title(); ?></h3>
-                <div class="pd-content">
+                <h3 data-aos="fade-up" data-aos-duration="800"><?php the_title(); ?></h3>
+                <div class="pd-content" data-aos="fade-up" data-aos-duration="1500">
                     <?php the_content(); ?>
                 </div>
             </div>
         </div>
     </div>
-    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/coconut-pieces.png'; ?>" class="pd-blog-single-bottom">
+    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/coconut-pieces.png'; ?>" class="pd-blog-single-bottom" >
 </section>
 
 
