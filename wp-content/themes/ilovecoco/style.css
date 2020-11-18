@@ -1636,6 +1636,11 @@ a.page-numbers:hover{
     transform: scale(1.07);
 }
 
+#myVideo{
+    width: 100%;
+    height: 93vh;
+    object-fit: cover;
+}
 
 
 

@@ -5,10 +5,19 @@ Template Name: Home Page Template
 get_header();
 ?>
 
-<section class="l-c-banner" style="background-image:url(<?php echo bloginfo('template_url'); ?>/assets/img/banner.jpg);">
+<!-- <section class="l-c-banner" style="background-image:url(<?php echo bloginfo('template_url'); ?>/assets/img/banner.jpg);">
     <div class="container">
         <div class="row">
         </div>
+    </div>
+</section> -->
+
+<!-- main slider -->
+<section class="pd-main-slider">
+    <div class="slider-main-img">
+        <video autoplay muted loop id="myVideo">
+            <source src="<?php the_field('banner_video'); ?>" type="video/mp4">
+        </video>
     </div>
 </section>
 
@@ -51,7 +60,7 @@ get_header();
             <div class="col-lg-6">
                 <h3 data-aos="fade-up" data-aos-duration="500"><?php the_field('main_title_sec_1') ?></h3>
                 <h4 data-aos="fade-up" data-aos-duration="800"><?php the_field('sub_title_sec_1'); ?></h4>
-                <div  data-aos="fade-up" data-aos-duration="1500"><?php the_field('description_sec_1'); ?></div>
+                <div data-aos="fade-up" data-aos-duration="1500"><?php the_field('description_sec_1'); ?></div>
             </div>
         </div>
     </div>
@@ -476,7 +485,7 @@ get_header();
                         </div>
                     </div>
 
-                    
+
 
 
 
