@@ -343,7 +343,7 @@ get_header();
             </div>
 
 
-            <ul class="row nav nav-tabs" id="myTab" role="tablist">
+            <ul class="row nav nav-tabs" id="myTab" role="tablist" data-aos="fade-up" data-aos-duration="1500">
 
                 <?php
 

@@ -68,7 +68,7 @@ get_header();
                         </div>
 
                 <?php
-                 $x++;
+                 $x = $x+500;
                     endwhile;
                 endif; ?>
 

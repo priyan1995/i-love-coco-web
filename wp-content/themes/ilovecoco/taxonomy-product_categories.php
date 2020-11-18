@@ -17,10 +17,10 @@ $term = get_queried_object();
     <section class="pd-prod-cat-sec l-c-p-t-b-5">
 
         <div class="container">
-            <h1 class="text-center"> <?php echo $al_cat_name; ?></h1>
-            <div class="text-center"> <?php echo term_description(); ?></div>
+            <h1 class="text-center" data-aos="fade-up" data-aos-duration="500"> <?php echo $al_cat_name; ?></h1>
+            <div class="text-center" data-aos="fade-up" data-aos-duration="1500"> <?php echo term_description(); ?></div>
 
-            <div class="category-menu-wrap">
+            <div class="category-menu-wrap" data-aos="zoom-in" data-aos-duration="1500">
                     <?php
                     wp_nav_menu(
                         array(
@@ -45,6 +45,7 @@ $term = get_queried_object();
 
 
                 <?php
+                $x = 500;
                 $products_category_looop  = new WP_Query(array("taxonomy" => "product_categories", "term" => $al_cat_slug, "posts_per_page" => "8"));
                 if ($products_category_looop->have_posts()) :
                     while ($products_category_looop->have_posts()) :
@@ -52,7 +53,7 @@ $term = get_queried_object();
                 ?>
 
 
-                        <div class="col-lg-3 m-b-20">
+                        <div class="col-lg-3 m-b-20" data-aos="fade-up" data-aos-duration="<?php echo $x; ?>">
                             <div class="pd-prod-card-home text-center">
                                 <img src="<?php the_field('image_prod'); ?>">
                                 <h4><?php the_title(); ?></h4>
@@ -62,8 +63,10 @@ $term = get_queried_object();
 
                         </div>
 
-                    <?php endwhile; ?>
-                <?php endif; ?>
+                    <?php
+                $x = $x+200;    
+                endwhile;
+                endif; ?>
 
             </div>
         </div>
@@ -75,8 +78,8 @@ $term = get_queried_object();
 
     <section class="l-c-certificate-sec l-c-p-t-b-5 pad-t-5 gray-back">
         <div class="container">
-            <h2>Our Certifications</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur</p>
+            <h2 data-aos="fade-up" data-aos-duration="500">Our Certifications</h2>
+            <p data-aos="fade-up" data-aos-duration="1500">Lorem ipsum dolor sit amet, consectetur</p>
 
             <div class="owl-carousel owl-theme" id="pd-cert-slider">
                 <?php

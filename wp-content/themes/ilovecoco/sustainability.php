@@ -257,6 +257,7 @@ get_header();
                         </script>
 
                 <?php
+                        $z = $z + 500;
                         $y++;
                     endwhile;
                 endif;
