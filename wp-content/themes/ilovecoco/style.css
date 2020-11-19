@@ -149,16 +149,19 @@ section.l-c-banner {
         line-height: 1.714;
 }
 
-#pd-abt-main-slider{
+#pd-abt-main-slider,
+#pd-mds-slider{
     position: relative;
 }
 
-#pd-abt-main-slider img{
+#pd-abt-main-slider img,
+#pd-mds-slider img{
     width:75%;
 }
 
 
-#pd-abt-main-slider .item {
+#pd-abt-main-slider .item,
+#pd-mds-slider .item {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -190,7 +193,8 @@ section.l-c-banner {
     outline: none;
 }
 
-#pd-abt-main-slider .owl-nav {
+#pd-abt-main-slider .owl-nav,
+#pd-mds-slider .owl-nav {
     position: absolute;
     right: 80px;
     bottom: 20px;
@@ -1640,6 +1644,115 @@ a.page-numbers:hover{
     width: 100%;
     height: 93vh;
     object-fit: cover;
+}
+
+/* quality page */
+
+#pd-cert-slider-quality img{
+    width: 85%;
+    height: 100px;
+    object-fit: contain;
+}
+
+#pd-mid-green-slider img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pd-mid-green .owl-theme .owl-nav{
+    text-align: left !important;
+}
+
+.pd-m-b-20{
+    margin-bottom: 20px;
+}
+
+.pd-mid-green .pd-mid-green-img-t-1 img{
+    height: 250px;
+    object-fit: cover;
+}
+
+.pd-mid-green .pd-mid-green-img-b-2 img{
+    height: 250px;
+    object-fit: cover;
+    width: 100%;   
+}
+.pd-mid-green .pd-mid-green-img-b-1 img{
+    height: 250px;
+    object-fit: cover;
+    width: 100%;    
+}
+
+.pd-mid-green .pd-mid-green-img-b-2, .pd-mid-green .pd-mid-green-img-b-1{
+    width: 50%;
+}
+
+.pd-mid-green .pd-mid-green-img-b-2{
+    margin: 4px 0 0 2px;
+}
+
+.pd-mid-green .pd-mid-green-img-b-1{
+    margin: 4px 2px 0 0;
+}
+
+.pd-mid-green{
+    background: #056240;
+    color: white;
+}
+
+.pd-mid-green p{ 
+    color: white;
+    font-weight: 300;
+}
+
+.pd-quality-cert-sec h2{
+    font-size: 45px;
+    color: rgb(51, 53, 51);
+    line-height: 50px;
+    text-align: center;
+}
+
+#pd-cert-slider-quality .owl-nav{
+    margin-top: 20px;
+    text-align: left;
+}
+
+.pd-cert-card-2{
+    padding: 25px;
+    background: #f4f4f6;
+    position: relative;
+    height: 175px;
+    margin: 35px 0;
+}
+
+.right-aligned-cert.pd-cert-card-2{
+    padding-right: 180px;
+}
+.right-aligned-cert img{
+    width: 160px;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: -26px;
+}
+
+
+.left-aligned-cert.pd-cert-card-2{
+    padding-left: 180px;
+}
+.left-aligned-cert img{
+    width: 160px;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: -26px;
+}
+
+.pd-cert-card-2 img{
+    padding: 10px;
+    background: #f4f4f6;
+    box-shadow: 0px 11px 22px -10px #00000061;
 }
 
 
