@@ -94,7 +94,7 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-lg-6 pd-m-b-20">
-                <div class="owl-carousel owl-theme" id="pd-mid-green-slider">
+                <div class="owl-carousel owl-theme" id="pd-mid-green-slider" data-aos="zoom-in" data-aos-duration="500" class="text-center">
 
                     <?php
 
@@ -124,24 +124,24 @@ get_header();
 
                 </div>
             </div>
-            <div class="col-lg-6 pd-m-b-20">
+            <div class="col-lg-6 pd-m-b-20" data-aos="fade-up" data-aos-duration="500" class="text-center">
                 <div><?php the_field('right_content_mgs'); ?></div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="800" class="text-center">
                 <div><?php the_field('left_content_mgs'); ?></div>
             </div>
 
             <div class="col-lg-6">
                 <div class="pd-mid-green-img-t-1">
-                    <img src="<?php the_field('right_sided_image_1_mgs'); ?>" class="w-100">
+                    <img src="<?php the_field('right_sided_image_1_mgs'); ?>" class="w-100" data-aos="zoom-in" data-aos-duration="500" class="text-center">
                 </div>
                 <div class="pd-flex">
                     <div class="pd-mid-green-img-b-1">
-                        <img src="<?php the_field('right_sided_image_2_mgs'); ?>">
+                        <img src="<?php the_field('right_sided_image_2_mgs'); ?>" data-aos="zoom-in" data-aos-duration="800" class="text-center">
                     </div>
                     <div class="pd-mid-green-img-b-2">
-                        <img src="<?php the_field('right_sided_image_3_mgs'); ?>">
+                        <img src="<?php the_field('right_sided_image_3_mgs'); ?>" data-aos="zoom-in" data-aos-duration="1200" class="text-center">
                     </div>
                 </div>
             </div>
@@ -173,20 +173,15 @@ get_header();
 
             ?>
 
-                    <div class="pd-cert-card-2 <?php if ($y%2==1){ echo 'right-aligned-cert'; }else{ echo 'left-aligned-cert'; } ?>  ">
+                    <div class="pd-cert-card-2 <?php if ($y%2==1){ echo 'right-aligned-cert'; }else{ echo 'left-aligned-cert'; } ?>  " data-aos="fade-up" data-aos-duration="<?php echo $z; ?>" class="text-center">
                         <h5><?php the_title() ?></h5>
                         <div><?php the_content(); ?></div>
                         <img src="<?php the_field('image_certificate'); ?>">
                     </div>
 
-                    <!-- <div class="pd-cert-card left-aligned-cert">
-                        <h5>lorem ipsum</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab itaque in at laudantium alias. Optio sint quo nulla obcaecati, consectetur eum, repellat earum eius sed dolore esse asperiores fugiat autem.</p>
-                        <img src="http://localhost/ilovecoco/wp-content/uploads/2020/11/unnamed.jpg">
-                    </div> -->
-
+                 
             <?php
-                    $z = $z + 500;
+                    $z = $z + 200;
                     $y++;
                 endwhile;
             endif;
