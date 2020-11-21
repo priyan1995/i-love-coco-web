@@ -173,13 +173,17 @@ get_header();
 
             ?>
 
-                    <div class="pd-cert-card-2 <?php if ($y%2==1){ echo 'right-aligned-cert'; }else{ echo 'left-aligned-cert'; } ?>  " data-aos="fade-up" data-aos-duration="<?php echo $z; ?>" class="text-center">
+                    <div class="pd-cert-card-2 <?php if ($y % 2 == 1) {
+                                                    echo 'right-aligned-cert';
+                                                } else {
+                                                    echo 'left-aligned-cert';
+                                                } ?>  " data-aos="fade-up" data-aos-duration="<?php echo $z; ?>" class="text-center">
                         <h5><?php the_title() ?></h5>
                         <div><?php the_content(); ?></div>
                         <img src="<?php the_field('image_certificate'); ?>">
                     </div>
 
-                 
+
             <?php
                     $z = $z + 200;
                     $y++;
@@ -216,7 +220,15 @@ get_header();
 </section>
 
 
+<section class="l-c-contact-sec l-c-p-t-b-5" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
+    <div class="container">
+        <h2 data-aos="fade-up" data-aos-duration="500">Get a Free Quotation</h2>
+        <p class="main-para" data-aos="fade-up" data-aos-duration="800">Lorem ipsum dolor sit amet, consectetur</p>
 
+        <div data-aos="fade-up" data-aos-duration="1500"><?php echo do_shortcode('[contact-form-7 id="5" title="Contact form home"]'); ?></div>
+
+    </div>
+</section>
 
 
 
