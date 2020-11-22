@@ -32,6 +32,8 @@ get_header();
                     $image1 = get_field('slider_image_1_sec_1');
                     $image2 = get_field('slider_image_2_sec_1');
                     $image3 = get_field('slider_image_3_sec_2');
+					$image4 = get_field('slider_image_4_sec_3');
+					$image5 = get_field('slider_image_5_sec_4');
 
                     ?>
 
@@ -50,6 +52,18 @@ get_header();
                     <?php if ($image3) { ?>
                         <div class="item">
                             <img src="<?php echo $image3; ?>">
+                        </div>
+                    <?php } ?>
+					
+					   <?php if ($image4) { ?>
+                        <div class="item">
+                            <img src="<?php echo $image4; ?>">
+                        </div>
+                    <?php } ?>
+					
+					   <?php if ($image5) { ?>
+                        <div class="item">
+                            <img src="<?php echo $image5; ?>">
                         </div>
                     <?php } ?>
 
@@ -74,6 +88,39 @@ get_header();
 
 
         <div class="pd-product-tab-home">
+		
+		  <ul class="row nav nav-tabs" id="myTab" role="tablist" data-aos="fade-up" data-aos-duration="1500">
+
+                <?php
+
+                $terms = get_terms(array(
+                    'taxonomy' => 'product_categories',
+                    'hide_empty' => false,
+                    'post_type' => 'products'
+                ));
+
+                foreach ($terms as $term) {
+                    $term_id = $term->id;
+                    $category = $term->name;
+                    $category_image = get_field('category_icon', $term);
+                    $category_slug = $term->slug;
+
+                ?>
+
+
+                    <li class="col-lg-3 nav-item">
+                        <a class="nav-link <?php if ($category_slug == 'coconut_milk') {
+                                                echo 'active show';
+                                            } ?>" id="<?php echo $category_slug; ?>-tab" data-toggle="tab" href="#<?php echo $category_slug; ?>" role="tab" aria-controls="<?php echo $category_slug; ?>" aria-selected="true">
+
+                            <div class="pd-cat-box">
+                                <h4><?php echo  $category; ?></h4>
+                            </div>
+                        </a>
+                    </li>
+                <?php } ?>
+
+            </ul>
 
             <div class="tab-content" id="nav-tabContent">
 
@@ -352,38 +399,7 @@ get_header();
             </div>
 
 
-            <ul class="row nav nav-tabs" id="myTab" role="tablist" data-aos="fade-up" data-aos-duration="1500">
-
-                <?php
-
-                $terms = get_terms(array(
-                    'taxonomy' => 'product_categories',
-                    'hide_empty' => false,
-                    'post_type' => 'products'
-                ));
-
-                foreach ($terms as $term) {
-                    $term_id = $term->id;
-                    $category = $term->name;
-                    $category_image = get_field('category_icon', $term);
-                    $category_slug = $term->slug;
-
-                ?>
-
-
-                    <li class="col-lg-3 nav-item">
-                        <a class="nav-link <?php if ($category_slug == 'coconut_milk') {
-                                                echo 'active show';
-                                            } ?>" id="<?php echo $category_slug; ?>-tab" data-toggle="tab" href="#<?php echo $category_slug; ?>" role="tab" aria-controls="<?php echo $category_slug; ?>" aria-selected="true">
-
-                            <div class="pd-cat-box">
-                                <h4><?php echo  $category; ?></h4>
-                            </div>
-                        </a>
-                    </li>
-                <?php } ?>
-
-            </ul>
+          
         </div>
 
     </div>

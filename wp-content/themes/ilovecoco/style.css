@@ -21,6 +21,14 @@ textdomain: ilovecoco
 */
 /* common */
 
+body{
+	scroll-behavior: smooth;
+}
+
+p{
+	line-height:24px !important;
+}
+
 .pd-flex{
     display: flex;
 }
@@ -41,7 +49,7 @@ textdomain: ilovecoco
 }
 
 .l-c-p-t-b-5{
-    padding: 5% 0;
+    padding: 4% 0;
 }
 
 p{
@@ -121,7 +129,13 @@ a{
 
 
 
+
+
 /* banner */
+
+.single-products .header{
+	    box-shadow: 0px 1px 6px -3px #00000054;
+}
 
 section.l-c-banner {
     height: 100vh;
@@ -141,12 +155,13 @@ section.l-c-banner {
         font-size: 26px;
         color: rgb(51, 53, 51);
         line-height: 1.2;
-        text-align: left;    
+        text-align: left;  
+		margin-bottom:20px;
 }
 .l-c-abt-sec p{
         font-size: 14px;
         color: rgb(124, 124, 124);
-        line-height: 1.714;
+        line-height: 26px !important;
 }
 
 #pd-abt-main-slider,
@@ -245,7 +260,7 @@ section.l-c-banner {
     display: inline;
     height: 150px;
     object-fit: contain;
-    filter: grayscale(1);
+    filter: grayscale(0);
     transition: 0.5s;
 }
 
@@ -773,7 +788,7 @@ section.l-c-banner {
     color: rgba(51, 53, 51,1);
     text-align: center;
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 55px;
 }
 
 .l-c-product-sec{
@@ -788,7 +803,7 @@ section.l-c-banner {
     height: 200px;
     bottom: -35px;
     left: 0;
-    background: url('http://localhost/ilovecoco/wp-content/uploads/2020/11/prod-back.png');
+    background: url('http://ilovecoco.co/wp-content/uploads/2020/11/prod-back.png');
     transform: rotate(180deg);
     background-repeat: no-repeat;
     background-position: 47% 6%;
@@ -803,7 +818,7 @@ section.l-c-banner {
     height: 200px;
     top: -32px;
     left: 0;
-    background: url(http://localhost/ilovecoco/wp-content/uploads/2020/11/prod-back.png);
+    background: url(http://ilovecoco.co/wp-content/uploads/2020/11/prod-back.png);
     background-repeat: no-repeat;
     background-position: 47% 6%;
     background-size: 150%;
@@ -1331,7 +1346,7 @@ section.l-c-banner {
 .pd-f-t-section .owl-carousel .owl-nav button.owl-prev,
 .pd-sustainability-section .owl-carousel .owl-nav button.owl-prev{
     float: left;
-    background: url('http://localhost/ilovecoco/wp-content/uploads/2020/11/arrow.png') !important;
+    background: url('http://ilovecoco.co/wp-content/uploads/2020/11/arrow.png') !important;
     color: transparent !important;
     width: 60px;
     height: 60px;
@@ -1345,7 +1360,7 @@ section.l-c-banner {
 .pd-f-t-section .owl-carousel .owl-nav button.owl-next,
 .pd-sustainability-section .owl-carousel .owl-nav button.owl-next{
     float: right;
-    background: url('http://localhost/ilovecoco/wp-content/uploads/2020/11/arrow.png') !important;
+    background: url('http://ilovecoco.co/wp-content/uploads/2020/11/arrow.png') !important;
     color: transparent !important;
     width: 60px;
     height: 60px;
@@ -1755,6 +1770,25 @@ a.page-numbers:hover{
     box-shadow: 0px 11px 22px -10px #00000061;
 }
 
+.pd-free-quot-link{
+	background: #fbb02a;
+    padding: 14px 20px 16px;
+    display: inline-block;
+    border-radius: 25px;
+    color: white;
+	font-family: 'Roboto Slab', serif;
+	transition:0.5s;
+}
+
+.pd-free-quot-link:hover{
+	color:white;
+	text-decoration:none;
+	transition:0.5s;
+	transform:translatey(-2px);
+}
+
+
+
 
 
 /* =================================== media queries ========================================== */
@@ -1839,6 +1873,14 @@ a.page-numbers:hover{
 /* Small Devices, Tablets */
 
 @media only screen and (max-width: 768px) {
+	
+	.pd-prod-inner-back{
+		position: absolute;
+		bottom: 0;
+		z-index: -1;
+		filter: opacity(0.4);
+		right: -25px;
+	}
 
     .pd-contact-inf-card{
         margin-top: 0;
