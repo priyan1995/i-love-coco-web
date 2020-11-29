@@ -447,7 +447,7 @@ get_header();
     <div class="pd-win-win-sec-video">
         <div class="video-background">
             <div class="video-foreground">
-                <iframe src="<?php the_field('video_url'); ?>" frameborder="0" allowfullscreen style="background-color:#ff7600"></iframe>
+                <iframe src="<?php the_field('video_url_utube'); ?>" frameborder="0" allowfullscreen style="background-color:#ff7600"></iframe>
             </div>
         </div>
     </div>

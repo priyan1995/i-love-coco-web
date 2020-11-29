@@ -128,8 +128,13 @@ a{
 }
 
 
+/* contact form */
 
-
+.wpcf7 form.sent .wpcf7-response-output{
+    margin-top: 5px !important;
+    color: white !important;
+    border: none !important;
+}
 
 /* banner */
 
@@ -803,7 +808,7 @@ section.l-c-banner {
     height: 200px;
     bottom: -35px;
     left: 0;
-    background: url('http://ilovecoco.co/wp-content/uploads/2020/11/prod-back.png');
+    background: url('https://ilovecoco.co/wp-content/uploads/2020/11/prod-back.png');
     transform: rotate(180deg);
     background-repeat: no-repeat;
     background-position: 47% 6%;
@@ -818,7 +823,7 @@ section.l-c-banner {
     height: 200px;
     top: -32px;
     left: 0;
-    background: url(http://ilovecoco.co/wp-content/uploads/2020/11/prod-back.png);
+    background: url(https://ilovecoco.co/wp-content/uploads/2020/11/prod-back.png);
     background-repeat: no-repeat;
     background-position: 47% 6%;
     background-size: 150%;
@@ -1346,7 +1351,7 @@ section.l-c-banner {
 .pd-f-t-section .owl-carousel .owl-nav button.owl-prev,
 .pd-sustainability-section .owl-carousel .owl-nav button.owl-prev{
     float: left;
-    background: url('http://ilovecoco.co/wp-content/uploads/2020/11/arrow.png') !important;
+    background: url('https://ilovecoco.co/wp-content/uploads/2020/11/arrow.png') !important;
     color: transparent !important;
     width: 60px;
     height: 60px;
@@ -1360,7 +1365,7 @@ section.l-c-banner {
 .pd-f-t-section .owl-carousel .owl-nav button.owl-next,
 .pd-sustainability-section .owl-carousel .owl-nav button.owl-next{
     float: right;
-    background: url('http://ilovecoco.co/wp-content/uploads/2020/11/arrow.png') !important;
+    background: url('https://ilovecoco.co/wp-content/uploads/2020/11/arrow.png') !important;
     color: transparent !important;
     width: 60px;
     height: 60px;
@@ -2078,5 +2083,13 @@ a.page-numbers:hover{
     #navbarNavDropdown{
         height: 80vh !important;
     }
+}
+
+
+@media (min-width:600px){
+	.pd-quality-cert-sec .pd-cert-card-2 div{
+		height:100px;
+		overflow:auto;
+	}
 }
 

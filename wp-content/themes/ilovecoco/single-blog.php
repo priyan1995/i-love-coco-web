@@ -13,10 +13,10 @@ get_header();
 <section class="pd-blog-singel-inner l-c-p-t-b-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 pd-main-image">
+            <div class="col-lg-12 pd-main-image text-center">
                 <img src="<?php the_field('image_blog'); ?>" data-aos="fade-up" data-aos-duration="500">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12 text-center" style="margin-top:20px">
                 <h3 data-aos="fade-up" data-aos-duration="800"><?php the_title(); ?></h3>
                 <div class="pd-content" data-aos="fade-up" data-aos-duration="1500">
                     <?php the_content(); ?>

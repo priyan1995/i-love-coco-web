@@ -24,6 +24,10 @@
   <!-- faveicon -->
   <link rel="icon" href="<?php bloginfo('template_directory'); ?>/assets/img/fave.png" type="image/png" sizes="16x16">
 
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
 
   <title><?php wp_title(); ?></title>
   <?php wp_head(); ?>

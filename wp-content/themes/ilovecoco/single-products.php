@@ -41,6 +41,7 @@
                 <div class="col-lg-6">
                     <h2><?php the_title(); ?></h2>
                     <?php the_content(); ?>
+					<a href="#contact-bottom-form" class="pd-free-quot-link">Get a Freee Quotation</a>
 
                 </div>
 
@@ -258,7 +259,7 @@
                     <?php } ?>
 
 
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/img/coconut-pieces.png" style="width: 95%;">
+                    <img class="pd-prod-inner-back" src="<?php echo bloginfo('template_url'); ?>/assets/img/coconut-pieces.png" style="width: 95%;">
 
                 </div>
             </div>
@@ -340,7 +341,7 @@
     </section>
 
 
-    <section class="l-c-contact-sec l-c-p-t-b-5" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
+    <section class="l-c-contact-sec l-c-p-t-b-5" id="contact-bottom-form" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
         <div class="container">
             <h2>Get a Free Quotation</h2>
             <p class="main-para">Lorem ipsum dolor sit amet, consectetur</p>
@@ -352,4 +353,8 @@
 
 
 </div>
+
+
+
+
 <?php get_footer(); ?>

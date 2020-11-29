@@ -168,6 +168,28 @@ get_header();
                 </div>
 
             </div>
+			
+			  <!-- card -->
+            <div class="row pd-aligned-center">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
+                    <div class="owl-carousel owl-theme" id="pd-abt-slider-5">
+                        <div class="item">
+                            <img src="<?php the_field('slider_image_1_abt_card_5'); ?>">
+                        </div>
+                        <div class="item">
+                            <img src="<?php the_field('slider_image_2_abt_card_5'); ?>">
+                        </div>
+                        <div class="item">
+                            <img src="<?php the_field('slider_image_3_abt_card_5'); ?>">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+                    <h5><?php the_field('title_abt_card_5'); ?></h5>
+                    <p><?php the_field('description_abt_card_5'); ?></p>
+
+                </div>
+            </div>
 
         </div>
     </section>
