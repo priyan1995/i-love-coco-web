@@ -72,7 +72,7 @@ get_header();
                 </div>
             </div>
             <div class="col-lg-6">
-                <h3 data-aos="fade-up" data-aos-duration="500"><?php the_field('main_title_sec_1') ?></h3>
+                <h1 data-aos="fade-up" data-aos-duration="500"><?php the_field('main_title_sec_1') ?></h1>
                 <h4 data-aos="fade-up" data-aos-duration="800"><?php the_field('sub_title_sec_1'); ?></h4>
                 <div data-aos="fade-up" data-aos-duration="1500"><?php the_field('description_sec_1'); ?></div>
             </div>
@@ -82,7 +82,7 @@ get_header();
 
 <section class="l-c-product-sec l-c-p-t-b-5">
     <div class="container">
-        <h2 data-aos="fade-up" data-aos-duration="500"><?php the_field('heading_product_tab'); ?></h2>
+        <h1 data-aos="fade-up" data-aos-duration="500"><?php the_field('heading_product_tab'); ?></h1>
         <p class="main-para" data-aos="fade-up" data-aos-duration="800"><?php the_field('sub_heading_product_tab'); ?></p>
 
 
@@ -407,7 +407,7 @@ get_header();
 
 <section class="l-c-certificate-sec l-c-p-t-b-5 pad-t-5">
     <div class="container">
-        <h2 data-aos="fade-up" data-aos-duration="500"><?php the_field('heading_certification_tab'); ?></h2>
+        <h1 data-aos="fade-up" data-aos-duration="500"><?php the_field('heading_certification_tab'); ?></h1>
         <p data-aos="fade-up" data-aos-duration="800"><?php the_field('heading_sub_heading'); ?></p>
 
         <div class="owl-carousel owl-theme" id="pd-cert-slider">
@@ -456,7 +456,7 @@ get_header();
 <section class="l-c-news-events l-c-p-t-b-5">
     <div class="container">
 
-        <h2 class="text-center" data-aos="fade-up" data-aos-duration="500"><?php the_field('title_blog'); ?></h2>
+        <h1 class="text-center" data-aos="fade-up" data-aos-duration="500"><?php the_field('title_blog'); ?></h1>
         <p class="text-center para-main" data-aos="fade-up" data-aos-duration="800"><?php the_field('sub_heading_blog'); ?></p>
 
         <div class="owl-carousel owl-theme" id="pd-n-e-slider">
@@ -522,7 +522,7 @@ get_header();
 
 <section class="l-c-contact-sec l-c-p-t-b-5" style="background-image: url(<?php echo bloginfo('template_url'); ?>/assets/img/cont-back.jpg);">
     <div class="container">
-        <h2 data-aos="fade-up" data-aos-duration="500"><?php the_field('title_contact'); ?></h2>
+        <h1 data-aos="fade-up" data-aos-duration="500"><?php the_field('title_contact'); ?></h1>
         <p class="main-para" data-aos="fade-up" data-aos-duration="800"><?php the_field('sub_heading_contact'); ?></p>
 
         <div data-aos="fade-up" data-aos-duration="1500"><?php echo do_shortcode('[contact-form-7 id="5" title="Contact form home"]'); ?></div>

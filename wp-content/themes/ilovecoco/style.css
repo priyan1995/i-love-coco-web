@@ -150,7 +150,7 @@ section.l-c-banner {
 
 /* about sec */
 
-.l-c-abt-sec h3{
+.l-c-abt-sec h1{
         font-size:45px;
         color: rgba(51, 53, 51,1);
         line-height: 1.2;
@@ -222,7 +222,7 @@ section.l-c-banner {
 
 /* certificate section */
 
-.l-c-certificate-sec h2{
+.l-c-certificate-sec h1{
     font-size: 45px;
     color: rgb(51, 53, 51);
     line-height: 50px;
@@ -339,7 +339,7 @@ section.l-c-banner {
     height: 95vh;
 }
 
-.l-c-news-events h2{
+.l-c-news-events h1{
     font-size: 45px;
     color: rgb(51, 53, 51);
     line-height: 50px;
@@ -362,7 +362,7 @@ section.l-c-banner {
     background-attachment: fixed;
 }
 
-.l-c-contact-sec h2{
+.l-c-contact-sec h1{
     font-size: 45px;
     color: rgba(255, 255, 255,1);
     line-height: 50px;
@@ -781,7 +781,7 @@ section.l-c-banner {
 
 /* product section */
 
-.l-c-product-sec h2{
+.l-c-product-sec h1{
     font-size: 45px;
     color: rgba(51, 53, 51,1);
     line-height: 50px;
